@@ -14,7 +14,7 @@ export default function Pricing() {
     <div className="mx-3">
       <Card className="mx-auto mt-20 max-w-xl">
         <CardHeader>
-          <CardTitle>Choose your donation plan</CardTitle>
+          <CardTitle>Choose a donation plan</CardTitle>
           <CardDescription>
             Choose a plan to make a lasting impact.
           </CardDescription>
