@@ -1,4 +1,3 @@
-import { TypographyH2 } from "@/components/typography/H2";
 import { Button } from "@/components/ui/button";
 import {
   Card,
