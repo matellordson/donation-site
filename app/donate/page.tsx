@@ -15,7 +15,7 @@ export default function Pricing() {
         <CardHeader className="mb-[-30px]">
           <CardTitle>Choose a donation plan</CardTitle>
           <CardDescription>
-            Choose a plan and make a difference.
+            Select a plan and make a difference.
           </CardDescription>
         </CardHeader>
         <CardContent className="mx-auto max-w-fit">
@@ -56,7 +56,7 @@ export default function Pricing() {
                   </div>
                 </div>
               </TabsContent>
-              <TabsContent value="monthly">Monthly tab</TabsContent>
+              <TabsContent value="monthly"></TabsContent>
               <TabsContent value="yearly">Yearly tab</TabsContent>
             </Tabs>
           </div>
