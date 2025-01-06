@@ -10,7 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function Pricing() {
   return (
-    <div className="">
+    <div className="lg:w-[450px]">
       <Card className="">
         <CardHeader className="mb-[-30px]">
           <CardTitle>Choose a donation plan</CardTitle>
@@ -30,7 +30,7 @@ export function Pricing() {
                 <div className="w-full space-y-7 rounded-lg border p-5">
                   <div className="">
                     <p className="text-xl font-semibold">Pay once</p>
-                    <p className="text-xl text-muted-foreground">
+                    <p className="text-muted-foreground">
                       make a one-time impact
                     </p>
                   </div>
@@ -38,7 +38,7 @@ export function Pricing() {
                     <p className="text-2xl font-bold lg:text-3xl">
                       $200 ⎯ $10,000{" "}
                     </p>
-                    <div className="">
+                    <div className="flex justify-center">
                       <a href="https://buy.stripe.com/test_aEU4jKeBU7OUauk001">
                         <Button variant={"emphasis"} size={"lg"}>
                           <svg
