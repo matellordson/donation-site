@@ -15,7 +15,7 @@ import { PricingSkeleton } from "./pricing-skeleton";
 const oneTimePayment = "https://buy.stripe.com/test_aEU4jKeBU7OUauk001";
 
 const monthlyPricing = [
-  { amount: "$200", link: "#" },
+  { amount: "$200", link: "https://buy.stripe.com/test_bIY6rSgK23yEbyocMP" },
   { amount: "$300", link: "#" },
   { amount: "$500", link: "#" },
   { amount: "$750", link: "#" },
@@ -30,7 +30,7 @@ const monthlyPricing = [
 ];
 
 const yearlyPricing = [
-  { amount: "$200", link: "#" },
+  { amount: "$200", link: "https://buy.stripe.com/test_eVa03ufFYfhmeKA5ko" },
   { amount: "$300", link: "#" },
   { amount: "$500", link: "#" },
   { amount: "$750", link: "#" },
