@@ -168,9 +168,14 @@ export function Pricing() {
                       Pick a monthly support level
                     </p>
                   </div>
-                  <div className="grid grid-cols-2 items-center justify-center gap-2 lg:grid-cols-3">
+                  <div className="grid grid-cols-3 items-center justify-center gap-2">
                     {monthlyPricing.map((price) => (
-                      <Button variant={"emphasis"} asChild key={price.amount}>
+                      <Button
+                        variant={"emphasis"}
+                        asChild
+                        key={price.amount}
+                        className="text-lg"
+                      >
                         <a href={price.link}>{price.amount}</a>
                       </Button>
                     ))}
@@ -185,9 +190,14 @@ export function Pricing() {
                       Pick a yearly support level
                     </p>
                   </div>
-                  <div className="grid grid-cols-2 items-center justify-center gap-2 lg:grid-cols-3">
+                  <div className="grid grid-cols-3 items-center justify-center gap-2">
                     {yearlyPricing.map((price) => (
-                      <Button variant={"emphasis"} asChild key={price.amount}>
+                      <Button
+                        variant={"emphasis"}
+                        asChild
+                        key={price.amount}
+                        className="text-lg"
+                      >
                         <a href={price.link}>{price.amount}</a>
                       </Button>
                     ))}
