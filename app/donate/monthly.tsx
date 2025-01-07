@@ -73,16 +73,18 @@ export function MonthlySubscription() {
           <PopoverTrigger asChild>
             <Button
               variant="outline"
-              className="h-[40px] w-fit items-center justify-start font-semibold tracking-wide"
+              className="h-[45px] w-fit items-center justify-center font-semibold tracking-wide"
             >
               {selectedStatus ? (
-                <p className="text-xl font-bold">{selectedStatus.label}</p>
+                <p className="text-2xl font-bold lg:text-3xl">
+                  {selectedStatus.label}
+                </p>
               ) : (
                 <p>Choose amount</p>
               )}
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="p-0" side="right" align="start">
+          <PopoverContent className="w-fit p-0" side="right" align="start">
             <Command>
               <CommandInput placeholder="Search amount..." />
               <CommandList>

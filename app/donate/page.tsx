@@ -1,7 +1,6 @@
 import { GalleryVerticalEnd } from "lucide-react";
 
 import { Pricing } from "./pricing";
-import Image from "next/image";
 
 export default function Donate() {
   return (
@@ -22,7 +21,7 @@ export default function Donate() {
         </div>
       </div>
       <div className="relative hidden bg-muted lg:block">
-        <Image
+        <img
           src="/placeholder.svg"
           alt="Image"
           className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
