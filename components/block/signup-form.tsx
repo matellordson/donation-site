@@ -35,7 +35,6 @@ export function SignupForm({
                 <Label htmlFor="password">Password</Label>
                 <Input id="password" type="password" name="password" required />
                 <p className="text-sm text-muted-foreground">
-                  {" "}
                   Minimum 6, recommended 8 or more.
                 </p>
               </div>
