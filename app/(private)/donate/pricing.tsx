@@ -73,7 +73,7 @@ const yearlyPricing = [
   { amount: "$70,000", link: "#" },
   { amount: "$80,000", link: "#" },
   { amount: "$90,000", link: "#" },
-  { amount: "$100,000", link: "#" },
+  { amount: "$100K", link: "#" },
 ];
 
 export function Pricing() {
