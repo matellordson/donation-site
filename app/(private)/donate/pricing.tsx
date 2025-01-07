@@ -35,6 +35,15 @@ const monthlyPricing = [
   { amount: "$4,000", link: "#" },
   { amount: "$5,000", link: "#" },
   { amount: "$10,000", link: "#" },
+  { amount: "$20,000", link: "#" },
+  { amount: "$30,000", link: "#" },
+  { amount: "$40,000", link: "#" },
+  { amount: "$50,000", link: "#" },
+  { amount: "$60,000", link: "#" },
+  { amount: "$70,000", link: "#" },
+  { amount: "$80,000", link: "#" },
+  { amount: "$90,000", link: "#" },
+  { amount: "$100,000", link: "#" },
 ];
 
 const yearlyPricing = [
@@ -56,6 +65,15 @@ const yearlyPricing = [
   { amount: "$4,000", link: "#" },
   { amount: "$5,000", link: "#" },
   { amount: "$10,000", link: "#" },
+  { amount: "$20,000", link: "#" },
+  { amount: "$30,000", link: "#" },
+  { amount: "$40,000", link: "#" },
+  { amount: "$50,000", link: "#" },
+  { amount: "$60,000", link: "#" },
+  { amount: "$70,000", link: "#" },
+  { amount: "$80,000", link: "#" },
+  { amount: "$90,000", link: "#" },
+  { amount: "$100,000", link: "#" },
 ];
 
 export function Pricing() {
