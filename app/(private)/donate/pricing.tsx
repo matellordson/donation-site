@@ -131,7 +131,7 @@ export function Pricing() {
               <TabsContent value="ones" className="">
                 <div className="w-full space-y-7 rounded-lg border p-5">
                   <div className="">
-                    <p className="text-xl font-semibold">Pay once</p>
+                    <p className="text-xl font-semibold">Donate once</p>
                     <p className="text-muted-foreground">
                       Make a one-time impact
                     </p>
@@ -161,9 +161,7 @@ export function Pricing() {
               <TabsContent value="monthly">
                 <div className="w-full space-y-7 rounded-lg border p-5">
                   <div className="">
-                    <p className="text-xl font-semibold">
-                      Monthly subscription
-                    </p>
+                    <p className="text-xl font-semibold">Monthly donation</p>
                     <p className="text-muted-foreground">
                       Pick a monthly support level
                     </p>
@@ -185,7 +183,7 @@ export function Pricing() {
               <TabsContent value="yearly">
                 <div className="w-full space-y-7 rounded-lg border p-5">
                   <div className="">
-                    <p className="text-xl font-semibold">Yearly subscription</p>
+                    <p className="text-xl font-semibold">Yearly donation</p>
                     <p className="text-muted-foreground">
                       Pick a yearly support level
                     </p>
