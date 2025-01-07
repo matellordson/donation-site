@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/popover";
 
 type Pricing = {
-  value: any;
+  value: string;
   label: string;
 };
 
