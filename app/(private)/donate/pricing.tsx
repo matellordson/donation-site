@@ -15,7 +15,8 @@ import { PricingSkeleton } from "./pricing-skeleton";
 const oneTimePayment =
   process.env.NODE_ENV === "development"
     ? "https://buy.stripe.com/test_aEU4jKeBU7OUauk001"
-    : "";
+    : "https://buy.stripe.com/8wM16z6oedJS9kkbIK";
+
 const monthlyPricing = [
   {
     amount: "$200",
