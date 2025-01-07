@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+const oneTimePayment = "https://buy.stripe.com/test_aEU4jKeBU7OUauk001";
+
 const monthlyPricing = [
   {
     amount: "$200",
@@ -142,7 +144,7 @@ export function Pricing() {
                     </p>
                     <div className="">
                       <Button variant={"emphasis"} size={"lg"} asChild>
-                        <a href="https://buy.stripe.com/test_aEU4jKeBU7OUauk001">
+                        <a href={oneTimePayment}>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
