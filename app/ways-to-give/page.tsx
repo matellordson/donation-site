@@ -47,7 +47,7 @@ export default function waysToGive() {
       <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
         {donationOptions.map((option) => (
           <div
-            className="flex h-[250px] w-full flex-col items-center justify-between rounded border p-2 lg:h-[300px]"
+            className="flex h-[250px] w-full flex-col items-center justify-between rounded border p-2 shadow-sm lg:h-[300px]"
             key={option.title}
           >
             <div className="h-[55%] w-full rounded bg-muted shadow-md"></div>
