@@ -1,7 +1,7 @@
 export default function waysToGive() {
   const donationOptions = [
     {
-      title: "the poor",
+      title: "Help Turky and Syria Earthquake Relief Fund",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt beatae sapiente necessitatibus laudantium qui similique laborum voluptatibus, et reiciendis consequatur nihil, alias reprehenderit itaque blanditiis illum dignissimos perspiciatis quo amet. Nemo culpa ea sequi, vel quae provident tempore quaerat omnis esse ipsa incidunt ipsum, facilis hic distinctio officia velit.",
       raised: "$45,669",
       total: "$300,000",
@@ -9,32 +9,16 @@ export default function waysToGive() {
       supporters: "45,000",
     },
     {
-      title: "the needy",
-      desc: "this people will die of hunger",
+      title: "Help Poor Children with Cancer to Access Treatment",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt beatae sapiente necessitatibus laudantium qui similique laborum voluptatibus, et reiciendis consequatur nihil, alias reprehenderit itaque blanditiis illum dignissimos perspiciatis quo amet. Nemo culpa ea sequi, vel quae provident tempore quaerat omnis esse ipsa incidunt ipsum, facilis hic distinctio officia velit.",
       raised: "$2,669",
       total: "$1,000",
       progress: "60%",
       supporters: "4,000",
     },
     {
-      title: "the need",
-      desc: "this people will die of hunger",
-      raised: "$2,669",
-      total: "$1,000",
-      progress: "60%",
-      supporters: "4,000",
-    },
-    {
-      title: "the nee",
-      desc: "this people will die of hunger",
-      raised: "$2,669",
-      total: "$1,000",
-      progress: "60%",
-      supporters: "4,000",
-    },
-    {
-      title: "the ne",
-      desc: "this people will die of hunger",
+      title: "Provide Gift and Food to 700 Street Children",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt beatae sapiente necessitatibus laudantium qui similique laborum voluptatibus, et reiciendis consequatur nihil, alias reprehenderit itaque blanditiis illum dignissimos perspiciatis quo amet. Nemo culpa ea sequi, vel quae provident tempore quaerat omnis esse ipsa incidunt ipsum, facilis hic distinctio officia velit.",
       raised: "$2,669",
       total: "$1,000",
       progress: "60%",
@@ -50,9 +34,12 @@ export default function waysToGive() {
             className="flex h-[250px] w-full flex-col items-center justify-between rounded border border-muted p-2 shadow-sm lg:h-[300px]"
             key={option.title}
           >
-            <div className="h-[55%] w-full rounded bg-muted shadow-md"></div>
-            <div className="h-[45%] w-full">
-              <p></p>
+            <div className="h-[40%] w-full rounded bg-muted shadow-sm"></div>
+            <div className="h-[60%] w-full py-3">
+              {/* truncate to only two line */}
+              <p className="text-[11px] font-semibold lg:text-sm">
+                {option.title}
+              </p>
             </div>
           </div>
         ))}
