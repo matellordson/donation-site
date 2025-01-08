@@ -48,7 +48,7 @@ export function Pricing() {
                       $200 ⎯ $10,000{" "}
                     </p>
                     <div className="">
-                      <Button variant={"emphasis"} size={"lg"} asChild>
+                      <Button variant={"emphasis"} size={"big"} asChild>
                         <a href={oneTimePayment}>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"

@@ -112,7 +112,7 @@ export function MonthlySubscription() {
       </div>
       <Button
         variant={"emphasis"}
-        size={"lg"}
+        size={"big"}
         asChild
         className="cursor-pointer"
       >
