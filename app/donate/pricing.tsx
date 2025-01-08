@@ -36,7 +36,7 @@ export function Pricing() {
                 <TabsTrigger value="yearly">Yearly</TabsTrigger>
               </TabsList>
               <TabsContent value="ones" className="">
-                <div className="w-full space-y-7 rounded-lg border bg-accent p-5">
+                <div className="w-full space-y-7 rounded-lg border bg-accent p-5 text-accent-foreground">
                   <div className="">
                     <p className="text-xl font-semibold">Donate once</p>
                     <p className="text-muted-foreground">
