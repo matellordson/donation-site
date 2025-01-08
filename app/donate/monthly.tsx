@@ -55,7 +55,7 @@ export function MonthlySubscription() {
     null,
   );
 
-  const [paymentLink, setPaymentLink] = React.useState<string>();
+  const [paymentLink, setPaymentLink] = React.useState<string>("#");
 
   return (
     <div className="w-full space-y-5 rounded-lg border p-5">
