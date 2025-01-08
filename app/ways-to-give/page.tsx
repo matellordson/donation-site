@@ -43,8 +43,8 @@ export default function waysToGive() {
   ];
 
   return (
-    <div className="mx-auto max-w-sm px-5 py-10 lg:max-w-5xl lg:px-0">
-      <div className="grid grid-cols-1 gap-2 lg:grid-cols-4">
+    <div className="mx-auto max-w-sm px-3 py-10 lg:max-w-5xl lg:px-0">
+      <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
         {donationOptions.map((option) => (
           <div
             className="flex h-[300px] w-full flex-col items-center justify-between rounded border p-2"
