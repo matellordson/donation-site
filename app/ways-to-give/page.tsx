@@ -44,7 +44,6 @@ export default function waysToGive() {
 
   return (
     <div className="mx-auto max-w-sm px-5 py-10 lg:max-w-5xl lg:px-0">
-      {/* Mobile View */}
       <div className="grid grid-cols-1 gap-2 lg:grid-cols-4">
         {donationOptions.map((option) => (
           <div
