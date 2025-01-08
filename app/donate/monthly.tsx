@@ -17,6 +17,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import DonateButton from "@/components/block/donate-button";
+import { CircleDollarSign } from "lucide-react";
 
 type Pricing = {
   value: string;
@@ -70,15 +71,18 @@ export function MonthlySubscription() {
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
             <Button
-              variant="outline"
-              className="h-[45px] w-fit items-center justify-center bg-muted font-semibold tracking-wide"
+              variant="ghost"
+              className="w-fit items-center justify-center px-0 font-semibold tracking-wide"
             >
               {selectedStatus ? (
                 <p className="text-2xl font-bold lg:text-3xl">
                   {selectedStatus.label}
                 </p>
               ) : (
-                <p>Choose amount</p>
+                <div className="flex items-center justify-center gap-x-1 text-[15px]">
+                  <CircleDollarSign className="scale-125" />{" "}
+                  <p>Select amount</p>
+                </div>
               )}
             </Button>
           </PopoverTrigger>
