@@ -37,9 +37,7 @@ export default function waysToGive() {
             <div className="h-[40%] w-full rounded bg-muted shadow-sm"></div>
             <div className="h-[60%] w-full py-3">
               {/* truncate to only two line */}
-              <p className="text-[11px] font-semibold lg:text-sm">
-                {option.title}
-              </p>
+              <p className="text-[11px] font-bold lg:text-sm">{option.title}</p>
             </div>
           </div>
         ))}
