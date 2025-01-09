@@ -36,6 +36,13 @@ export default async function waysToGive() {
 
   return (
     <div className="mx-auto max-w-sm px-3 py-10 lg:max-w-5xl lg:px-0">
+      <div className="mb-5 w-[500px]">
+        <p className="text-2xl font-bold capitalize">how can you help?</p>
+        <p className="text-muted-foreground">
+          Choose a cause, donate, and change lives.
+        </p>
+      </div>
+
       <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
         {donationOptions.map((option) => (
           <a href={`/ways-to-give/${option.currentSlug}`} key={option.title}>
