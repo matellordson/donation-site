@@ -1,24 +1,59 @@
 import { Progress } from "@/components/ui/progress";
+import { sanityClient, urlFor } from "@/lib/sanity";
+import { PortableText } from "next-sanity";
+import Image from "next/image";
 
-export default function waysToGive() {
-  const donationOptions = [
-    {
-      title: "Help Turky and Syria Earthquake Relief Fund",
-      desc: "since 2006, SOIL has been working urban to provide basic aminities to those who suffer",
-      raised: 300,
-      total: 3000,
-      progress: 79,
-      supporters: "45,000",
-    },
-    {
-      title: "Help Poor Children with Cancer to Access Treatment",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt beatae sapiente necessitatibus laudantium qui similique laborum voluptatibus, et reiciendis consequatur nihil, alias reprehenderit itaque blanditiis illum dignissimos perspiciatis quo amet. Nemo culpa ea sequi, vel quae provident tempore quaerat omnis esse ipsa incidunt ipsum, facilis hic distinctio officia velit.",
-      raised: 500,
-      total: 790,
-      progress: 60,
-      supporters: "4,000",
-    },
-  ];
+export const revalidate = 0;
+
+export default async function waysToGive() {
+  interface donationTypes {
+    title: string;
+    image: any;
+    currentSlug: string;
+    content: any[];
+    raised: number;
+    total: number;
+    supporters: string;
+  }
+  async function getData() {
+    const query = `
+    *[_type == "donation-options"] | order(_createdAt desc) {
+  title,
+  image,
+    "currentSlug": slug.current,
+    content,
+    raised,
+    total,
+    supporters
+}`;
+
+    const data = await sanityClient.fetch(query);
+
+    return data;
+  }
+
+  const donationOptions: donationTypes[] = await getData();
+
+  // const donationOptions = [
+  //   {
+  //     title: "Help Turky and Syria Earthquake Relief Fund",
+  //     content:
+  //       "since 2006, SOIL has been working urban to provide basic aminities to those who suffer",
+  //     raised: 300,
+  //     total: 3000,
+  //     progress: 79,
+  //     supporters: "45,000",
+  //   },
+  //   {
+  //     title: "Help Poor Children with Cancer to Access Treatment",
+  //     content:
+  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt beatae sapiente necessitatibus laudantium qui similique laborum voluptatibus, et reiciendis consequatur nihil, alias reprehenderit itaque blanditiis illum dignissimos perspiciatis quo amet. Nemo culpa ea sequi, vel quae provident tempore quaerat omnis esse ipsa incidunt ipsum, facilis hic distinctio officia velit.",
+  //     raised: 500,
+  //     total: 790,
+  //     progress: 60,
+  //     supporters: "4,000",
+  //   },
+  // ];
 
   return (
     <div className="mx-auto max-w-sm px-3 py-10 lg:max-w-5xl lg:px-0">
@@ -28,15 +63,23 @@ export default function waysToGive() {
             className="flex h-[275px] w-full flex-col items-center justify-between rounded border border-muted p-2 shadow-sm lg:h-[300px]"
             key={option.title}
           >
-            <div className="h-[49%] w-full rounded bg-muted shadow-sm"></div>
+            <div className="h-[49%] w-full rounded bg-muted shadow-sm">
+              <Image
+                src={urlFor(option.image).url()}
+                height={1000}
+                width={210}
+                alt={option.title}
+                className="h-full w-full rounded object-cover object-top shadow-sm grayscale"
+              />
+            </div>
             <div className="h-[51%] w-full py-3">
               <>
                 <p className="line-clamp-2 text-[12px] font-bold tracking-wide lg:text-sm">
                   {option.title}
                 </p>
-                <p className="line-clamp-2 text-[11px] text-muted-foreground">
-                  {option.desc}
-                </p>
+                <div className="line-clamp-2 text-[11px] text-muted-foreground">
+                  <PortableText value={option.content} />
+                </div>
               </>
               <div className="mt-2 space-y-px">
                 <p className="text-[11px] font-bold">
