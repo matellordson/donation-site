@@ -34,27 +34,6 @@ export default async function waysToGive() {
 
   const donationOptions: donationTypes[] = await getData();
 
-  // const donationOptions = [
-  //   {
-  //     title: "Help Turky and Syria Earthquake Relief Fund",
-  //     content:
-  //       "since 2006, SOIL has been working urban to provide basic aminities to those who suffer",
-  //     raised: 300,
-  //     total: 3000,
-  //     progress: 79,
-  //     supporters: "45,000",
-  //   },
-  //   {
-  //     title: "Help Poor Children with Cancer to Access Treatment",
-  //     content:
-  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt beatae sapiente necessitatibus laudantium qui similique laborum voluptatibus, et reiciendis consequatur nihil, alias reprehenderit itaque blanditiis illum dignissimos perspiciatis quo amet. Nemo culpa ea sequi, vel quae provident tempore quaerat omnis esse ipsa incidunt ipsum, facilis hic distinctio officia velit.",
-  //     raised: 500,
-  //     total: 790,
-  //     progress: 60,
-  //     supporters: "4,000",
-  //   },
-  // ];
-
   return (
     <div className="mx-auto max-w-sm px-3 py-10 lg:max-w-5xl lg:px-0">
       <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
