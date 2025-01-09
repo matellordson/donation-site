@@ -5,26 +5,18 @@ export default function waysToGive() {
     {
       title: "Help Turky and Syria Earthquake Relief Fund",
       desc: "since 2006, SOIL has been working urban to provide basic aminities to those who suffer",
-      raised: "$45,669",
-      total: "$300,000",
+      raised: 300,
+      total: 3000,
       progress: 79,
       supporters: "45,000",
     },
     {
       title: "Help Poor Children with Cancer to Access Treatment",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt beatae sapiente necessitatibus laudantium qui similique laborum voluptatibus, et reiciendis consequatur nihil, alias reprehenderit itaque blanditiis illum dignissimos perspiciatis quo amet. Nemo culpa ea sequi, vel quae provident tempore quaerat omnis esse ipsa incidunt ipsum, facilis hic distinctio officia velit.",
-      raised: "$2,669",
-      total: "$1,000",
+      raised: 500,
+      total: 790,
       progress: 60,
       supporters: "4,000",
-    },
-    {
-      title: "Provide Gift and Food to 700 Street Children",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deserunt beatae sapiente necessitatibus laudantium qui similique laborum voluptatibus, et reiciendis consequatur nihil, alias reprehenderit itaque blanditiis illum dignissimos perspiciatis quo amet. Nemo culpa ea sequi, vel quae provident tempore quaerat omnis esse ipsa incidunt ipsum, facilis hic distinctio officia velit.",
-      raised: "$2,669",
-      total: "$1,000",
-      progress: 20,
-      supporters: "1,000",
     },
   ];
 
@@ -48,13 +40,12 @@ export default function waysToGive() {
               </>
               <div className="mt-2 space-y-px">
                 <p className="text-[11px] font-bold">
-                  {option.raised}
+                  ${option.raised}
                   <span className="font-normal text-muted-foreground">
-                    {" / "}
-                    {option.total}
+                    {" / "}${option.total}
                   </span>
                 </p>
-                <Progress value={option.progress} />
+                <Progress value={(option.raised / option.total) * 100} />
                 <div className="flex flex-col">
                   <div className="h-1 w-2 bg-transparent"></div>
                   <div className="flex h-fit items-center gap-x-1">
