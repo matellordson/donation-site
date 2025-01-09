@@ -69,7 +69,7 @@ export default async function waysToGive() {
                 height={1000}
                 width={210}
                 alt={option.title}
-                className="h-full w-full rounded object-cover object-top shadow-sm grayscale"
+                className="h-full w-full rounded object-cover object-top opacity-90 shadow-sm grayscale"
               />
             </div>
             <div className="h-[51%] w-full py-3">
