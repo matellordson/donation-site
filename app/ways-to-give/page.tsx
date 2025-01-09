@@ -36,7 +36,7 @@ export default async function waysToGive() {
 
   return (
     <div className="mx-auto max-w-sm px-3 py-10 lg:max-w-5xl lg:px-0">
-      <div className="mb-5 w-[500px]">
+      <div className="mb-5 w-full">
         <p className="text-2xl font-bold capitalize">how can you help?</p>
         <p className="text-muted-foreground">
           Choose a cause, donate, and change lives.
@@ -59,7 +59,7 @@ export default async function waysToGive() {
               </div>
               <div className="h-[51%] w-full py-3">
                 <>
-                  <p className="line-clamp-2 text-[12px] font-bold tracking-wide lg:text-sm">
+                  <p className="line-clamp-2 text-[11px] font-extrabold tracking-wide lg:text-sm">
                     {option.title}
                   </p>
                   <div className="line-clamp-2 h-[30px] overflow-hidden text-[11px] text-muted-foreground">
