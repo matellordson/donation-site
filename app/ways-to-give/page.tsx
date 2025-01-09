@@ -78,7 +78,7 @@ export default async function waysToGive() {
                 <p className="line-clamp-2 text-[12px] font-bold tracking-wide lg:text-sm">
                   {option.title}
                 </p>
-                <div className="line-clamp-2 h-fit overflow-hidden text-[11px] text-muted-foreground">
+                <div className="line-clamp-2 h-[30px] overflow-hidden text-[11px] text-muted-foreground">
                   <PortableText value={option.content} />
                 </div>
               </>
