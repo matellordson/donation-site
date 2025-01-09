@@ -65,6 +65,7 @@ export default async function waysToGive() {
           >
             <div className="h-[49%] w-full rounded bg-muted shadow-sm">
               <Image
+                priority
                 src={urlFor(option.image).url()}
                 height={1000}
                 width={210}
@@ -77,7 +78,7 @@ export default async function waysToGive() {
                 <p className="line-clamp-2 text-[12px] font-bold tracking-wide lg:text-sm">
                   {option.title}
                 </p>
-                <div className="line-clamp-2 overflow-hidden text-[11px] text-muted-foreground">
+                <div className="line-clamp-2 h-fit overflow-hidden text-[11px] text-muted-foreground">
                   <PortableText value={option.content} />
                 </div>
               </>
