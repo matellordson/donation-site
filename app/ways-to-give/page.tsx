@@ -2,7 +2,6 @@ import { Progress } from "@/components/ui/progress";
 import { sanityClient, urlFor } from "@/lib/sanity";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
-import { PortableTextLineClamp } from "./portable-line-clamp";
 
 export const revalidate = 0;
 
@@ -78,9 +77,8 @@ export default async function waysToGive() {
                 <p className="line-clamp-2 text-[12px] font-bold tracking-wide lg:text-sm">
                   {option.title}
                 </p>
-                <div className="line-clamp-2 text-[11px] text-muted-foreground">
-                  {/* <PortableText value={option.content} /> */}
-                  <PortableTextLineClamp value={option.content} lines={2} />
+                <div className="line-clamp-2 overflow-hidden text-[11px] text-muted-foreground">
+                  <PortableText value={option.content} />
                 </div>
               </>
               <div className="mt-2 space-y-px">
