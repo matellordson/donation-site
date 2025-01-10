@@ -48,7 +48,7 @@ const monthlyPricing: Pricing[] = [
   { label: "$70,000", value: "fkkl" },
   { label: "$80,000", value: "etr" },
   { label: "$90,000", value: "gklg" },
-  { label: "$100K", value: "sjsj" },
+  { label: "$100,000", value: "sjsj" },
 ] as const;
 
 export function MonthlySubscription() {
@@ -79,7 +79,7 @@ export function MonthlySubscription() {
                   {selectedStatus.label}
                 </p>
               ) : (
-                <div className="flex items-center justify-center gap-x-1 rounded-xl border p-2 text-[15px] shadow-sm">
+                <div className="flex items-center justify-center gap-x-1 rounded-xl border p-2 text-[15px]">
                   <CircleDollarSign className="scale-125" />{" "}
                   <p>Select amount</p>
                 </div>
