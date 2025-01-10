@@ -46,7 +46,7 @@ export default async function waysToGive() {
       <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
         {donationOptions.map((option) => (
           <a href={`/ways-to-give/${option.currentSlug}`} key={option.title}>
-            <div className="flex h-[275px] w-full flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[300px]">
+            <div className="flex h-[265px] w-full flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[300px]">
               <div className="h-[49%] w-full rounded bg-muted shadow-sm">
                 <Image
                   priority
