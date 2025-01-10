@@ -18,7 +18,7 @@ export function SignupForm({
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Create an account</h1>
                 <p className="text-balance text-muted-foreground">
-                  Register your Acme Inc account
+                  Register an account to make Donation
                 </p>
               </div>
               <div className="grid gap-2">
