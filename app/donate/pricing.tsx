@@ -49,7 +49,9 @@ export function Pricing() {
                       $200 ⎯ $10,000{" "}
                     </p>
                     <div className="">
-                      <DonateButton link={oneTimePayment} />
+                      <DonateButton link={oneTimePayment}>
+                        Donate Now
+                      </DonateButton>
                     </div>
                   </div>
                 </div>

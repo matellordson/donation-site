@@ -115,7 +115,7 @@ export function YearlySubscription() {
           </PopoverContent>
         </Popover>
       </div>
-      <DonateButton link={paymentLink} />
+      <DonateButton link={paymentLink}>Donate Now</DonateButton>
     </div>
   );
 }

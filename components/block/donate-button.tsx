@@ -1,9 +1,14 @@
 import { Button } from "../ui/button";
 
-export default function DonateButton({ link }: { link: string }) {
+interface type {
+  link: string;
+  children: React.ReactNode;
+}
+
+export default function DonateButton({ link, children }: type) {
   return (
     <Button variant={"emphasis"} size={"big"} asChild>
-      <a href={link}>Donate Now</a>
+      <a href={link}>{children}</a>
     </Button>
   );
 }
