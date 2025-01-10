@@ -1,3 +1,4 @@
+import DonateButton from "@/components/block/donate-button";
 import { Progress } from "@/components/ui/progress";
 import { sanityClient, urlFor } from "@/lib/sanity";
 import { PortableText } from "next-sanity";
@@ -49,14 +50,17 @@ export default async function Page({
 
       <div className="my-4 mt-4 space-y-2 rounded-xl bg-accent px-5 py-3 text-primary">
         <p className="pb-2 text-xl font-bold lg:text-2xl">{data.title}</p>
-        <div>
+        <div className="space-y-1">
           <p className="text-[15px] font-bold">
             ${data.raised}
             <span className="font-normal text-emerald-900">
               {" / "}${data.total}
             </span>
           </p>
-          <Progress className="h-3" value={(data.raised / data.total) * 100} />
+          <Progress
+            className="h-3 max-w-xs"
+            value={(data.raised / data.total) * 100}
+          />
         </div>
         <div className="flex flex-col">
           <div className="h-1 w-2 bg-transparent"></div>
@@ -75,6 +79,9 @@ export default async function Page({
             </p>
           </div>
         </div>
+        <DonateButton className="w-32" link="#">
+          Donate
+        </DonateButton>
       </div>
       <div className="prose">
         <PortableText value={data.content} />
