@@ -31,24 +31,24 @@ const monthlyPricing: Pricing[] = [
   },
   { label: "$300", value: "300" },
   { label: "$500", value: "500" },
-  // { label: "$750", value: "#" },
-  // { label: "$1,000", value: "#" },
-  // { label: "$1,500", value: "#" },
-  // { label: "$2,000", value: "#" },
-  // { label: "$2,500", value: "#" },
-  // { label: "$3,000", value: "#" },
-  // { label: "$4,000", value: "#" },
-  // { label: "$5,000", value: "#" },
-  // { label: "$10,000", value: "#" },
-  // { label: "$20,000", value: "#" },
-  // { label: "$30,000", value: "#" },
-  // { label: "$40,000", value: "#" },
-  // { label: "$50,000", value: "#" },
-  // { label: "$60,000", value: "#" },
-  // { label: "$70,000", value: "#" },
-  // { label: "$80,000", value: "#" },
-  // { label: "$90,000", value: "#" },
-  // { label: "$100K", value: "#" },
+  { label: "$750", value: "t" },
+  { label: "$1,000", value: "h" },
+  { label: "$1,500", value: "j" },
+  { label: "$2,000", value: "tr" },
+  { label: "$2,500", value: "hh" },
+  { label: "$3,000", value: "gg" },
+  { label: "$4,000", value: "dkfj" },
+  { label: "$5,000", value: "fkkf" },
+  { label: "$10,000", value: "fkk" },
+  { label: "$20,000", value: "di" },
+  { label: "$30,000", value: "jr" },
+  { label: "$40,000", value: "lk" },
+  { label: "$50,000", value: "eej" },
+  { label: "$60,000", value: "mbm" },
+  { label: "$70,000", value: "fkkl" },
+  { label: "$80,000", value: "etr" },
+  { label: "$90,000", value: "gklg" },
+  { label: "$100K", value: "sjsj" },
 ] as const;
 
 export function MonthlySubscription() {
@@ -79,7 +79,7 @@ export function MonthlySubscription() {
                   {selectedStatus.label}
                 </p>
               ) : (
-                <div className="flex items-center justify-center gap-x-1 rounded-xl border p-2 text-[15px]">
+                <div className="flex items-center justify-center gap-x-1 rounded-xl border p-2 text-[15px] shadow-sm">
                   <CircleDollarSign className="scale-125" />{" "}
                   <p>Select amount</p>
                 </div>
