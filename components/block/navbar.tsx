@@ -1,8 +1,18 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { SquareChevronUp } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -52,7 +62,7 @@ const Navbar = () => {
                     Our Work
                   </Link>
                   <Link
-                    href="/contact"
+                    href="/ways-to-give"
                     className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
                   >
                     Ways to Give
@@ -66,6 +76,69 @@ const Navbar = () => {
                 Login
               </Link>
             </div>
+            <Drawer>
+              <DrawerTrigger className="lg:hidden">
+                <SquareChevronUp className="text-gray-600" />
+              </DrawerTrigger>
+              <DrawerContent>
+                <DrawerHeader>
+                  <DrawerTitle></DrawerTitle>
+                  <DrawerDescription></DrawerDescription>
+                </DrawerHeader>
+                <DrawerFooter>
+                  <div className="flex flex-col items-baseline">
+                    <Link href="/" className="flex items-center pb-3">
+                      <svg
+                        className="h-8 w-8 text-blue-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 10V3L4 14h7v7l9-11h-7z"
+                        />
+                      </svg>
+                      <span className="ml-2 text-xl font-bold text-gray-800">
+                        Logo
+                      </span>
+                    </Link>
+                    <Link
+                      href="/"
+                      className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
+                    >
+                      Home
+                    </Link>
+                    <Link
+                      href="/about"
+                      className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      href="/services"
+                      className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
+                    >
+                      Our Work
+                    </Link>
+                    <Link
+                      href="/ways-to-give"
+                      className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
+                    >
+                      Ways to Give
+                    </Link>
+                  </div>
+                  <Link
+                    href={"/auth/login"}
+                    className={`md:inline-flex ${buttonVariants({ variant: "outline", size: "sm" })}`}
+                  >
+                    Login
+                  </Link>{" "}
+                </DrawerFooter>
+              </DrawerContent>
+            </Drawer>
           </div>
         </div>
       </nav>
