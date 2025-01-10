@@ -1,3 +1,9 @@
+import Navbar from "@/components/block/navbar";
+
 export default function Home() {
-  return <p>please donate</p>;
+  return (
+    <div className="">
+      <Navbar />
+    </div>
+  );
 }
