@@ -24,7 +24,7 @@ const Navbar = () => {
               <div className="flex-shrink-0">
                 <Link href="/" className="flex items-center">
                   <svg
-                    className="h-8 w-8 text-blue-500"
+                    className="h-8 w-8 text-primary"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -89,7 +89,7 @@ const Navbar = () => {
                   <div className="flex flex-col items-baseline">
                     <Link href="/" className="flex items-center pb-3">
                       <svg
-                        className="h-8 w-8 text-blue-500"
+                        className="h-8 w-8 text-primary"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
