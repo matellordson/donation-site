@@ -83,7 +83,7 @@ export default async function Page({
           Donate
         </DonateButton>
       </div>
-      <div className="prose">
+      <div className="prose py-3">
         <PortableText value={data.content} />
       </div>
     </div>
