@@ -79,7 +79,7 @@ export default async function Page({
             </p>
           </div>
         </div>
-        <DonateButton className="w-32" link="#">
+        <DonateButton className="w-32" link={`/ways-to-give/${slug}/donate`}>
           Donate
         </DonateButton>
       </div>
