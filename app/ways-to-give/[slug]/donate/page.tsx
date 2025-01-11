@@ -1,14 +1,11 @@
-import { GalleryVerticalEnd } from "lucide-react";
-
 import { Pricing } from "./pricing";
 import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
 
 export default function Donate() {
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
       <div className="flex flex-col gap-4 p-6 md:p-10">
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center justify-start gap-2">
           <Link href="/" className="flex items-center">
             <svg
               className="h-8 w-8 text-primary"
@@ -23,13 +20,9 @@ export default function Donate() {
                 d="M13 10V3L4 14h7v7l9-11h-7z"
               />
             </svg>
-            <span className="ml-2 text-xl font-bold text-gray-800">Logo</span>
-          </Link>
-          <Link
-            href={""}
-            className={` ${buttonVariants({ variant: "outline", size: "sm" })}`}
-          >
-            Billing
+            <span className="ml-2 text-xl font-bold text-gray-800">
+              H&J Foundation
+            </span>
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-center">

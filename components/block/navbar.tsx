@@ -1,7 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -13,8 +11,12 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { SquareChevronUp } from "lucide-react";
+import { createClient } from "@/utils/supabase/client";
+import signout from "@/app/auth/actions";
 
-const Navbar = () => {
+const Navbar = async () => {
+  const supabase = createClient().auth.getUser();
+
   return (
     <div className="fixed inset-x-0 top-0 z-50 flex justify-center border border-muted bg-white/80 shadow-sm backdrop-blur-2xl">
       <nav className="mx-auto w-full max-w-sm lg:max-w-6xl">
@@ -37,18 +39,12 @@ const Navbar = () => {
                     />
                   </svg>
                   <span className="ml-2 text-xl font-bold text-gray-800">
-                    Logo
+                    J&H Foundation
                   </span>
                 </Link>
               </div>
               <div className="hidden md:block">
                 <div className="flex items-baseline space-x-4">
-                  <Link
-                    href="/"
-                    className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
-                  >
-                    Home
-                  </Link>
                   <Link
                     href="/about"
                     className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
@@ -69,12 +65,34 @@ const Navbar = () => {
                   </Link>
                 </div>
               </div>
-              <Link
-                href={"/auth/login"}
-                className={`hidden md:inline-flex ${buttonVariants({ variant: "outline", size: "sm" })}`}
-              >
-                Login
-              </Link>
+              {!supabase ? (
+                <Link
+                  href={"/auth/login"}
+                  className={`hidden md:inline-flex ${buttonVariants({ variant: "outline", size: "sm" })}`}
+                >
+                  Login
+                </Link>
+              ) : (
+                <div className="flex gap-x-2">
+                  <a
+                    href={
+                      "https://billing.stripe.com/p/login/test_5kA02r2Um2SqcyQbII"
+                    }
+                    className={`hidden md:inline-flex ${buttonVariants({ variant: "outline", size: "sm" })}`}
+                  >
+                    Billing
+                  </a>
+                  <form action={signout}>
+                    <Button
+                      className="hidden text-gray-600 md:inline-flex"
+                      variant={"ghost"}
+                      size={"sm"}
+                    >
+                      Sign out
+                    </Button>
+                  </form>
+                </div>
+              )}
             </div>
             <Drawer>
               <DrawerTrigger className="lg:hidden">
@@ -102,7 +120,7 @@ const Navbar = () => {
                         />
                       </svg>
                       <span className="ml-2 text-xl font-bold text-gray-800">
-                        Logo
+                        J&H Foundation
                       </span>
                     </Link>
                     <Link
@@ -130,12 +148,36 @@ const Navbar = () => {
                       Ways to Give
                     </Link>
                   </div>
-                  <Link
-                    href={"/auth/login"}
-                    className={`md:inline-flex ${buttonVariants({ variant: "outline" })}`}
-                  >
-                    Login
-                  </Link>{" "}
+                  <div className="flex flex-col gap-x-2">
+                    {!supabase ? (
+                      <Link
+                        href={"/auth/login"}
+                        className={`md:inline-flex ${buttonVariants({ variant: "outline" })}`}
+                      >
+                        Login
+                      </Link>
+                    ) : (
+                      <>
+                        <a
+                          href={
+                            "https://billing.stripe.com/p/login/test_5kA02r2Um2SqcyQbII"
+                          }
+                          className={`md:inline-flex ${buttonVariants({ variant: "outline" })}`}
+                        >
+                          Billing
+                        </a>
+                        <form action={signout}>
+                          <Button
+                            className="hidden text-gray-600 md:inline-flex"
+                            variant={"ghost"}
+                            size={"sm"}
+                          >
+                            Sign out
+                          </Button>
+                        </form>
+                      </>
+                    )}
+                  </div>
                 </DrawerFooter>
               </DrawerContent>
             </Drawer>

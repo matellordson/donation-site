@@ -46,3 +46,15 @@ export async function signup(formData: FormData) {
   revalidatePath("/", "layout");
   redirect("/ways-to-give");
 }
+
+export default async function signout() {
+  const supabase = await createClient();
+  const { error } = await supabase.auth.signOut();
+  if (error) {
+    console.log(error);
+    redirect("/auth/error");
+  }
+
+  revalidatePath("/", "layout");
+  redirect("/");
+}
