@@ -16,8 +16,8 @@ import { SquareChevronUp } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <div className="fixed inset-x-0 top-0 z-50 flex justify-center p-4">
-      <nav className="w-full max-w-4xl rounded-xl border bg-white shadow-sm backdrop-blur-lg">
+    <div className="fixed inset-x-0 top-0 z-50 flex justify-center border bg-white/90 shadow-sm backdrop-blur-2xl">
+      <nav className="mx-auto w-full max-w-sm lg:max-w-6xl">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex w-full items-center justify-between">
@@ -107,32 +107,32 @@ const Navbar = () => {
                     </Link>
                     <Link
                       href="/"
-                      className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
+                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Home
                     </Link>
                     <Link
                       href="/about"
-                      className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
+                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       About Us
                     </Link>
                     <Link
                       href="/services"
-                      className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
+                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Our Work
                     </Link>
                     <Link
                       href="/ways-to-give"
-                      className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
+                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Ways to Give
                     </Link>
                   </div>
                   <Link
                     href={"/auth/login"}
-                    className={`md:inline-flex ${buttonVariants({ variant: "outline", size: "sm" })}`}
+                    className={`md:inline-flex ${buttonVariants({ variant: "outline" })}`}
                   >
                     Login
                   </Link>{" "}
