@@ -82,15 +82,14 @@ const Navbar = async () => {
                   >
                     Billing
                   </a>
-                  <form action={signout}>
-                    <Button
-                      className="hidden text-gray-600 md:inline-flex"
-                      variant={"ghost"}
-                      size={"sm"}
-                    >
-                      Sign out
-                    </Button>
-                  </form>
+                  <Button
+                    className="hidden text-gray-600 md:inline-flex"
+                    variant={"ghost"}
+                    size={"sm"}
+                    formAction={signout}
+                  >
+                    Sign out
+                  </Button>
                 </div>
               )}
             </div>
@@ -122,12 +121,6 @@ const Navbar = async () => {
                       <span className="ml-2 text-xl font-bold text-gray-800">
                         J&H Foundation
                       </span>
-                    </Link>
-                    <Link
-                      href="/"
-                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                    >
-                      Home
                     </Link>
                     <Link
                       href="/about"
@@ -166,15 +159,14 @@ const Navbar = async () => {
                         >
                           Billing
                         </a>
-                        <form action={signout}>
-                          <Button
-                            className="hidden text-gray-600 md:inline-flex"
-                            variant={"ghost"}
-                            size={"sm"}
-                          >
-                            Sign out
-                          </Button>
-                        </form>
+                        <Button
+                          className="hidden text-gray-600 md:inline-flex"
+                          variant={"ghost"}
+                          size={"sm"}
+                          formAction={signout}
+                        >
+                          Sign out
+                        </Button>
                       </>
                     )}
                   </div>
