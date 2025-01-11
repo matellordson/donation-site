@@ -46,7 +46,7 @@ const Navbar = async () => {
               <div className="hidden md:block">
                 <div className="flex items-baseline space-x-3">
                   <Link
-                    href="/about"
+                    href="/about-us"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     About Us
@@ -135,7 +135,7 @@ const Navbar = async () => {
                       </span>
                     </Link>
                     <Link
-                      href="/about"
+                      href="/about-us"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       About Us
