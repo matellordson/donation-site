@@ -44,24 +44,36 @@ const Navbar = async () => {
                 </Link>
               </div>
               <div className="hidden md:block">
-                <div className="flex items-baseline space-x-4">
+                <div className="flex items-baseline space-x-3">
                   <Link
                     href="/about"
-                    className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
+                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     About Us
                   </Link>
                   <Link
                     href="/services"
-                    className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
+                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     Our Work
                   </Link>
                   <Link
                     href="/ways-to-give"
-                    className="rounded-md px-3 py-2 text-sm font-bold text-gray-600 hover:text-primary"
+                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     Ways to Give
+                  </Link>
+                  <Link
+                    href="#"
+                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
+                  >
+                    Our Impact
+                  </Link>
+                  <Link
+                    href="#"
+                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
+                  >
+                    Partnership
                   </Link>
                 </div>
               </div>
@@ -139,6 +151,18 @@ const Navbar = async () => {
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Ways to Give
+                    </Link>
+                    <Link
+                      href="#"
+                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
+                    >
+                      Our Impact
+                    </Link>
+                    <Link
+                      href="#"
+                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
+                    >
+                      Partnership
                     </Link>
                   </div>
                   <div className="flex flex-col gap-x-2">
