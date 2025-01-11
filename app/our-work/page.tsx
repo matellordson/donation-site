@@ -7,8 +7,8 @@ interface type {
   title: string;
 }
 
-export default async function AboutUs() {
-  const query = `*[_type == "about-us" && title == "about" ][0]{
+export default async function OurWork() {
+  const query = `*[_type == "about-us" && title == "work" ][0]{
     content,
 }`;
   const data: type = await sanityClient.fetch(query);

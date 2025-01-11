@@ -52,7 +52,7 @@ const Navbar = async () => {
                     About Us
                   </Link>
                   <Link
-                    href="/services"
+                    href="/our-work"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     Our Work
@@ -147,7 +147,7 @@ const Navbar = async () => {
                       Our Work
                     </Link>
                     <Link
-                      href="/ways-to-give"
+                      href="/our-work"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Ways to Give
