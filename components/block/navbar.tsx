@@ -141,13 +141,13 @@ const Navbar = async () => {
                       About Us
                     </Link>
                     <Link
-                      href="/services"
+                      href="/our-work"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Our Work
                     </Link>
                     <Link
-                      href="/our-work"
+                      href="/ways-to-give"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Ways to Give
