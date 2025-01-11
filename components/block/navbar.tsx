@@ -160,7 +160,7 @@ const Navbar = async () => {
                           Billing
                         </a>
                         <Button
-                          className="hidden text-gray-600 md:inline-flex"
+                          className="text-gray-600 md:inline-flex"
                           variant={"ghost"}
                           size={"sm"}
                           formAction={signout}
