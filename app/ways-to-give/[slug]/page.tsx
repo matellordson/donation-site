@@ -40,7 +40,6 @@ export default async function Page({
   }
   return (
     <div className="">
-      <Navbar />
       <div className="mx-auto mt-14 max-w-sm px-3 py-10 lg:max-w-2xl lg:px-0">
         <Image
           priority

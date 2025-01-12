@@ -36,7 +36,6 @@ export default async function waysToGive() {
 
   return (
     <div className="">
-      <Navbar />
       <div className="mx-auto mt-14 max-w-sm px-3 py-10 lg:max-w-5xl lg:px-0">
         <div className="mb-3 w-full">
           <p className="text-2xl font-bold capitalize">how can you help?</p>
