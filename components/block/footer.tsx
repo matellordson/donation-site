@@ -75,9 +75,9 @@ export default function Footer({ className }: { className?: string }) {
                 &copy; {currentYear} Joy and Hope Foundation. All rights
                 reserved.
               </p>
-              <Link href={"#"} className="text-xs">
+              {/* <Link href={"#"} className="text-xs">
                 Terms and Conditions
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

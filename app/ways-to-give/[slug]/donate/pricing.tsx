@@ -20,7 +20,7 @@ const oneTimePayment =
 
 export function Pricing() {
   return (
-    <div className="lg:w-[450px]">
+    <div className="mx-auto max-w-6xl lg:w-[450px]">
       <Card className="">
         <CardHeader className="mb-[-30px]">
           <CardTitle>Choose a donation plan</CardTitle>
