@@ -5,9 +5,9 @@ export default function Footer({ className }: { className?: string }) {
     <footer
       className={`max-w-mx-auto mx-auto h-full w-full max-w-sm px-3 py-3 lg:max-w-6xl lg:px-0 ${className}`}
     >
-      <div className="w-full rounded-xl bg-primary p-5 text-primary-foreground lg:px-6">
+      <div className="w-full rounded-xl bg-primary p-5 text-primary-foreground">
         <div className="">
-          <div className="flex-col items-center justify-between space-y-5 lg:flex lg:space-y-0">
+          <div className="flex items-center justify-between">
             <div className="flex-shrink-0 space-y-2">
               <Link href="/" className="flex items-center">
                 <svg
