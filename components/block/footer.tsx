@@ -70,10 +70,15 @@ export default function Footer({ className }: { className?: string }) {
           </div>
           <hr className="my-5 border-emerald-900" />
           <div className="text-xs">
-            <p>
-              &copy; {currentYear} Joy and Hope Foundation. All rights reserved.
-            </p>
-            <DonateButton link="/ways-to-give">Donate Now</DonateButton>
+            <div className="items-center justify-between gap-y-1 lg:flex">
+              <p>
+                &copy; {currentYear} Joy and Hope Foundation. All rights
+                reserved.
+              </p>
+              <Link href={"#"} className="text-xs">
+                Terms and Conditions
+              </Link>
+            </div>
           </div>
         </div>
       </div>
