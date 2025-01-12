@@ -8,7 +8,7 @@ export default function Footer({ className }: { className?: string }) {
     <footer
       className={`max-w-mx-auto mx-auto h-full w-full max-w-sm px-3 py-3 lg:max-w-6xl lg:px-0 ${className}`}
     >
-      <div className="w-full rounded-xl bg-primary p-5 text-primary-foreground">
+      <div className="w-full rounded-xl bg-primary p-5 text-primary-foreground lg:px-7 lg:py-5">
         <div className="">
           <div className="items-center justify-between space-y-5 lg:flex">
             <div className="flex-shrink-0 space-y-2">
@@ -70,8 +70,8 @@ export default function Footer({ className }: { className?: string }) {
           </div>
           <hr className="my-5 border-emerald-900" />
           <div className="text-xs">
-            <div className="items-center justify-between gap-y-1 lg:flex">
-              <p>
+            <div className="items-center justify-between lg:flex">
+              <p className="pb-2">
                 &copy; {currentYear} Joy and Hope Foundation. All rights
                 reserved.
               </p>
