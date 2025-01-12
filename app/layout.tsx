@@ -20,13 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${nunito.className} flex h-screen w-screen flex-col items-center justify-between bg-red-500 antialiased`}
+        className={`${nunito.className} flex min-h-full flex-col antialiased`}
       >
-        <Navbar className="h-[10%]" />
-        <div className="h-[80%]">{children}</div>
-        <Footer className="m-0 h-[10%]" />
+        <Navbar className="flex-shrink-0" />
+        <main className="flex-grow overflow-auto">{children}</main>
+        <Footer className="flex-shrink-0" />
       </body>
     </html>
   );
