@@ -1,6 +1,9 @@
 import Link from "next/link";
+import DonateButton from "./donate-button";
 
 export default function Footer({ className }: { className?: string }) {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer
       className={`max-w-mx-auto mx-auto h-full w-full max-w-sm px-3 py-3 lg:max-w-6xl lg:px-0 ${className}`}
@@ -64,6 +67,13 @@ export default function Footer({ className }: { className?: string }) {
                 </Link>
               </div>
             </div>
+          </div>
+          <hr className="my-5 border-emerald-900" />
+          <div className="text-xs">
+            <p>
+              &copy; {currentYear} Joy and Hope Foundation. All rights reserved.
+            </p>
+            <DonateButton link="/ways-to-give">Donate Now</DonateButton>
           </div>
         </div>
       </div>
