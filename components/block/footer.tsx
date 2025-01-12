@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Footer({ className }: { className: string }) {
+export default function Footer({ className }: { className?: string }) {
   return (
     <footer
       className={`max-w-mx-auto mx-auto h-full w-full max-w-sm px-3 py-3 lg:max-w-6xl lg:px-0 ${className}`}
@@ -22,7 +22,7 @@ export default function Footer({ className }: { className: string }) {
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
-              <span className="ml-2 text-xl font-bold">J&H Foundation</span>
+              <span className="ml-2 text-lg font-bold">J&H Foundation</span>
             </Link>
           </div>
         </div>

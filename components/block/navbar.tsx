@@ -14,7 +14,7 @@ import { SquareChevronUp } from "lucide-react";
 import { createClient } from "@/utils/supabase/client";
 import signout from "@/app/auth/actions";
 
-const Navbar = async ({ className }: { className: string }) => {
+const Navbar = async ({ className }: { className?: string }) => {
   const supabase = createClient().auth.getUser();
 
   return (
