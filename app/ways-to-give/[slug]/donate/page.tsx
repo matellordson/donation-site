@@ -5,7 +5,7 @@ export default function Donate() {
   return (
     <div className="mt-14 grid min-h-svh lg:grid-cols-2">
       <div className="flex flex-1 items-center justify-center">
-        <div className="w-full lg:max-w-sm">
+        <div className="w-full">
           <Pricing />
         </div>
       </div>
