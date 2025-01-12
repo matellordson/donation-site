@@ -7,7 +7,7 @@ export default function Footer({ className }: { className?: string }) {
     >
       <div className="w-full rounded-xl bg-primary p-5 text-primary-foreground">
         <div className="">
-          <div className="flex items-center justify-between">
+          <div className="items-center justify-between space-y-5 lg:flex">
             <div className="flex-shrink-0 space-y-2">
               <Link href="/" className="flex items-center">
                 <svg
@@ -29,13 +29,13 @@ export default function Footer({ className }: { className?: string }) {
             </div>
             <div className="flex items-center justify-start gap-x-5 lg:justify-center">
               <div className="flex flex-col text-xs">
-                <Link href="/about-us" className="rounded-md px-3 py-1">
+                <Link href="/about-us" className="rounded-md py-1 lg:px-3">
                   About Us
                 </Link>
-                <Link href="/our-work" className="rounded-md px-3 py-1">
+                <Link href="/our-work" className="rounded-md py-1 lg:px-3">
                   Our Work
                 </Link>
-                <Link href="/ways-to-give" className="rounded-md px-3 py-1">
+                <Link href="/ways-to-give" className="rounded-md py-1 lg:px-3">
                   Ways to Give
                 </Link>
               </div>
