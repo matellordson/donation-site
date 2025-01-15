@@ -19,7 +19,7 @@ const Navbar = async ({ className }: { className?: string }) => {
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 flex justify-center border border-muted bg-white/80 shadow-sm backdrop-blur-2xl">
-      <div className="mx-auto w-full max-w-sm lg:max-w-6xl">
+      <div className="mx-auto w-full max-w-sm lg:max-w-7xl">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex w-full items-center justify-between">

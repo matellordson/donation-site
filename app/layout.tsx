@@ -3,6 +3,7 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/block/footer";
 import Navbar from "@/components/block/navbar";
+import { ToastProvider } from "@/components/ui/toast";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -25,7 +26,9 @@ export default function RootLayout({
         className={`${nunito.className} flex min-h-full flex-col antialiased`}
       >
         <Navbar className="flex-shrink-0" />
-        <main className="flex-grow overflow-auto">{children}</main>
+        <main className="flex-grow overflow-auto">
+          <ToastProvider>{children}</ToastProvider>
+        </main>
         <Footer className="flex-shrink-0" />
       </body>
     </html>

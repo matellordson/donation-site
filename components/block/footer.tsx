@@ -6,7 +6,7 @@ export default function Footer({ className }: { className?: string }) {
 
   return (
     <footer
-      className={`max-w-mx-auto mx-auto h-full w-full max-w-sm px-3 py-3 lg:max-w-6xl lg:px-0 ${className}`}
+      className={`max-w-mx-auto mx-auto h-full w-full max-w-sm px-3 py-3 lg:max-w-7xl lg:px-0 ${className}`}
     >
       <div className="w-full rounded-xl bg-primary p-5 text-primary-foreground lg:px-7 lg:py-5">
         <div className="">

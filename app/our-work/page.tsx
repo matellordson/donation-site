@@ -1,4 +1,3 @@
-import Navbar from "@/components/block/navbar";
 import { sanityClient } from "@/lib/sanity";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
