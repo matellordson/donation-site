@@ -122,7 +122,7 @@ const Navbar = async ({ className }: { className?: string }) => {
                 </DrawerHeader>
                 <DrawerFooter>
                   <div className="flex flex-col items-baseline">
-                    <Link href="/" className="flex items-center pb-3">
+                    <a href="/" className="flex items-center pb-3">
                       <svg
                         className="h-8 w-8 text-primary"
                         fill="none"
@@ -139,43 +139,43 @@ const Navbar = async ({ className }: { className?: string }) => {
                       <span className="ml-2 text-xl font-bold text-gray-800">
                         J&H Foundation
                       </span>
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       href="/about-us"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
-                      About Us
-                    </Link>
-                    <Link
+                      const About Us
+                    </a>
+                    <a
                       href="/our-work"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Our Work
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       href="/ways-to-give"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Ways to Give
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       href="#"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Our Impact
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       href="/contact-us"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Contact Us
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       href="#"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Partnership
-                    </Link>
+                    </a>
                   </div>
                   <div className="flex flex-col gap-x-2">
                     {!supabase ? (
