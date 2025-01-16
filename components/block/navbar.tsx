@@ -1,4 +1,4 @@
-import Link from "next/link";
+import a from "next/link";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Drawer,
@@ -24,7 +24,7 @@ const Navbar = async ({ className }: { className?: string }) => {
           <div className="flex h-16 items-center justify-between">
             <div className="flex w-full items-center justify-between">
               <div className="flex-shrink-0">
-                <Link href="/" className="flex items-center">
+                <a href="/" className="flex items-center">
                   <svg
                     className="h-8 w-8 text-primary"
                     fill="none"
@@ -41,55 +41,55 @@ const Navbar = async ({ className }: { className?: string }) => {
                   <span className="ml-2 text-xl font-bold text-gray-800">
                     J&H Foundation
                   </span>
-                </Link>
+                </a>
               </div>
               <div className="hidden md:block">
                 <div className="flex items-baseline space-x-2 text-xs">
-                  <Link
+                  <a
                     href="/about-us"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     About Us
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/our-work"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     Our Work
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/ways-to-give"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     Ways to Give
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="#"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     Our Impact
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="/contact-us"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     Contact Us
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="#"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     Partnership
-                  </Link>
+                  </a>
                 </div>
               </div>
               {!supabase ? (
-                <Link
+                <a
                   href={"/auth/login"}
                   className={`hidden md:inline-flex ${buttonVariants({ variant: "outline", size: "sm" })}`}
                 >
                   Login
-                </Link>
+                </a>
               ) : (
                 <div className="flex gap-x-2">
                   <a
@@ -144,7 +144,7 @@ const Navbar = async ({ className }: { className?: string }) => {
                       href="/about-us"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
-                      const About Us
+                      About Us
                     </a>
                     <a
                       href="/our-work"
@@ -179,12 +179,12 @@ const Navbar = async ({ className }: { className?: string }) => {
                   </div>
                   <div className="flex flex-col gap-x-2">
                     {!supabase ? (
-                      <Link
+                      <a
                         href={"/auth/login"}
                         className={`md:inline-flex ${buttonVariants({ variant: "outline" })}`}
                       >
                         Login
-                      </Link>
+                      </a>
                     ) : (
                       <>
                         <a
