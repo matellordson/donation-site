@@ -70,7 +70,7 @@ const Navbar = async ({ className }: { className?: string }) => {
                     Our Impact
                   </Link>
                   <Link
-                    href="#"
+                    href="/contact-us"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     Contact Us
@@ -165,7 +165,7 @@ const Navbar = async ({ className }: { className?: string }) => {
                       Our Impact
                     </Link>
                     <Link
-                      href="#"
+                      href="/contact-us"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Contact Us
