@@ -2,7 +2,6 @@ import { Progress } from "@/components/ui/progress";
 import { sanityClient, urlFor } from "@/lib/sanity";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
-import Navbar from "@/components/block/navbar";
 
 export const revalidate = 0;
 
