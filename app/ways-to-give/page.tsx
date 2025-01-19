@@ -62,7 +62,7 @@ export default async function waysToGive() {
                 </div>
                 <div className="h-[51%] w-full py-3">
                   <>
-                    <p className="line-clamp-2 text-[11px] font-extrabold tracking-wide lg:text-sm">
+                    <p className="line-clamp-1 text-[11px] font-extrabold capitalize tracking-wide lg:text-sm">
                       {option.title}
                     </p>
                     <div className="line-clamp-2 h-[30px] overflow-hidden text-[11px] text-muted-foreground">
