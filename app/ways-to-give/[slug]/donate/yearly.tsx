@@ -38,7 +38,7 @@ const yearlyPricing = [
   { label: "$2,500", value: "https://buy.stripe.com/dR6bLd4g6dJS8gg6oG" },
   { label: "$3,000", value: "https://buy.stripe.com/14k6qT3c221a0NOdRa" },
   { label: "$4,000", value: "https://buy.stripe.com/fZeg1t3c221aeEEaF0" },
-  { label: "$5,000", value: "fkkf" },
+  { label: "$5,000", value: "https://buy.stripe.com/7sI8z127Y6hq0NO14s" },
   { label: "$10,000", value: "fkk" },
   { label: "$20,000", value: "di" },
   { label: "$30,000", value: "jr" },

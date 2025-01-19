@@ -9,6 +9,7 @@ export const revalidate = 0;
 export default async function waysToGive() {
   interface donationTypes {
     title: string;
+    overview: string;
     image: any;
     currentSlug: string;
     content: any[];
@@ -20,6 +21,7 @@ export default async function waysToGive() {
     const query = `
     *[_type == "donation-options"] | order(_createdAt desc) {
   title,
+  overview,
   image,
     "currentSlug": slug.current,
     content,
@@ -38,7 +40,7 @@ export default async function waysToGive() {
     <div className="">
       <div className="mx-auto mt-14 max-w-sm px-3 py-10 lg:max-w-5xl lg:px-0">
         <div className="mb-3 w-full">
-          <p className="text-2xl font-bold capitalize">how can you help?</p>
+          <p className="text-2xl font-bold capitalize">how you can help</p>
           <p className="text-muted-foreground">
             Choose a cause, donate, and change lives.
           </p>
@@ -47,7 +49,7 @@ export default async function waysToGive() {
         <div className="grid grid-cols-2 gap-2 lg:grid-cols-4">
           {donationOptions.map((option) => (
             <a href={`/ways-to-give/${option.currentSlug}`} key={option.title}>
-              <div className="flex h-[265px] w-full flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[280px]">
+              <div className="flex h-[230px] w-full flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[240px]">
                 <div className="h-[49%] w-full rounded bg-muted shadow-sm">
                   <Image
                     priority
@@ -64,7 +66,7 @@ export default async function waysToGive() {
                       {option.title}
                     </p>
                     <div className="line-clamp-2 h-[30px] overflow-hidden text-[11px] text-muted-foreground">
-                      <PortableText value={option.content} />
+                      <p>{option.overview}</p>
                     </div>
                   </>
                   <div className="mt-2 space-y-px">

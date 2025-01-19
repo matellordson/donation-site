@@ -38,7 +38,7 @@ const monthlyPricing: Pricing[] = [
   { label: "$2,500", value: "https://buy.stripe.com/00g7uX3c2fS0cww28p" },
   { label: "$3,000", value: "https://buy.stripe.com/fZe2aD13U49iaoo6oH" },
   { label: "$4,000", value: "https://buy.stripe.com/14k02v13U49i1RS00l" },
-  { label: "$5,000", value: "fkkf" },
+  { label: "$5,000", value: "https://buy.stripe.com/8wMaH9dQG5dm68800n" },
   { label: "$10,000", value: "fkk" },
   { label: "$20,000", value: "di" },
   { label: "$30,000", value: "jr" },
