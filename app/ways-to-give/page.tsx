@@ -1,6 +1,5 @@
 import { Progress } from "@/components/ui/progress";
 import { sanityClient, urlFor } from "@/lib/sanity";
-import { PortableText } from "next-sanity";
 import Image from "next/image";
 
 export const revalidate = 0;
@@ -18,7 +17,7 @@ export default async function waysToGive() {
   }
   async function getData() {
     const query = `
-    *[_type == "donation-options"] | order(_createdAt desc) {
+    *[_type == "donation-options"] | order(_createdAt asc) {
   title,
   overview,
   image,
