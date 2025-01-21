@@ -81,7 +81,7 @@ export function YearlySubscription() {
               ) : (
                 <div className="flex items-center justify-center gap-x-1 rounded-xl border p-2 text-[15px]">
                   <CircleDollarSign className="scale-125" />{" "}
-                  <p>Select amount</p>
+                  <p>Select $200 - $100K</p>
                 </div>
               )}
             </Button>
