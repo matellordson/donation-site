@@ -56,7 +56,7 @@ export default async function Stories() {
               </div>
               <div className="h-[51%] w-full py-3">
                 <>
-                  <Link href={"#"}>
+                  <Link href={`/stories/${story.slug}`}>
                     <p className="line-clamp-1 text-[11px] font-extrabold capitalize tracking-wide hover:underline lg:text-sm">
                       {story.title}
                     </p>
