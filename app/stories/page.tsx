@@ -32,9 +32,11 @@ export default async function Stories() {
     <div className="">
       <div className="mx-auto mt-14 max-w-sm px-3 py-10 lg:max-w-5xl lg:px-0">
         <div className="mb-3 w-full">
-          <p className="text-2xl font-bold capitalize">how you can help</p>
+          <p className="text-2xl font-bold capitalize">
+            Real Stories, Real Impact.
+          </p>
           <p className="text-muted-foreground">
-            Choose a cause, donate, and change lives.
+            Your donations create hope and change lives.
           </p>
         </div>
 
