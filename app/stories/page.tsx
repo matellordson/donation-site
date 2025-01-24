@@ -61,7 +61,7 @@ export default async function Stories() {
                       {story.title}
                     </p>
                   </Link>
-                  <div className="line-clamp-4 overflow-hidden text-[11px] text-muted-foreground">
+                  <div className="line-clamp-4 h-[60px] overflow-hidden text-[11px] text-muted-foreground">
                     <PortableText value={story.content} />
                   </div>
                 </>

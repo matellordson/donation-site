@@ -1,6 +1,3 @@
-import DonateButton from "@/components/block/donate-button";
-import Navbar from "@/components/block/navbar";
-import { Progress } from "@/components/ui/progress";
 import { sanityClient, urlFor } from "@/lib/sanity";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
