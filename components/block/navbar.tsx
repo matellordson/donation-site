@@ -61,13 +61,13 @@ const Navbar = async ({ className }: { className?: string }) => {
                     href="/ways-to-give"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
-                    Ways to Give
+                    Donate
                   </a>
                   <a
-                    href="#"
+                    href="/stories"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
-                    Our Impact
+                    Stories
                   </a>
                   <a
                     href="/contact-us"
@@ -156,13 +156,13 @@ const Navbar = async ({ className }: { className?: string }) => {
                       href="/ways-to-give"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
-                      Ways to Give
+                      Donate
                     </a>
                     <a
-                      href="#"
+                      href="/stories"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
-                      Our Impact
+                      Stories
                     </a>
                     <a
                       href="/contact-us"
