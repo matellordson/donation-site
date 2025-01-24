@@ -9,7 +9,7 @@ export const revalidate = 0;
 export default async function Stories() {
   interface donationTypes {
     title: string;
-    slug: string;
+    currentSlug: string;
     content: any[];
     image: any;
   }
@@ -58,7 +58,7 @@ export default async function Stories() {
               </div>
               <div className="h-[51%] w-full py-3">
                 <>
-                  <Link href={`/stories/${story.slug}`}>
+                  <Link href={`/stories/${story.currentSlug}`}>
                     <p className="line-clamp-1 text-[11px] font-extrabold capitalize tracking-wide hover:underline lg:text-sm">
                       {story.title}
                     </p>
