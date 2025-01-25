@@ -58,18 +58,6 @@ const Navbar = async ({ className }: { className?: string }) => {
                     Our Work
                   </a>
                   <a
-                    href="/ways-to-give"
-                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                  >
-                    Donate
-                  </a>
-                  <a
-                    href="/stories"
-                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                  >
-                    Stories
-                  </a>
-                  <a
                     href="/contact-us"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
@@ -80,6 +68,18 @@ const Navbar = async ({ className }: { className?: string }) => {
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     Partnership
+                  </a>
+                  <a
+                    href="/stories"
+                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
+                  >
+                    Stories
+                  </a>
+                  <a
+                    href="/ways-to-give"
+                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
+                  >
+                    Donate
                   </a>
                 </div>
               </div>

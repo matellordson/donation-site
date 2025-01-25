@@ -44,9 +44,9 @@ export default async function Stories() {
           {stories.map((story) => (
             <div
               key={story.title}
-              className="flex h-[200px] w-full flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[200px]"
+              className="flex h-[170px] w-full flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[200px]"
             >
-              <div className="h-[85%] w-full rounded bg-muted shadow-sm">
+              <div className="h-[80%] w-full rounded bg-muted shadow-sm">
                 <Image
                   priority
                   src={urlFor(story.image).url()}
@@ -56,7 +56,7 @@ export default async function Stories() {
                   className="h-full w-full rounded object-cover object-top opacity-90 shadow-sm grayscale"
                 />
               </div>
-              <div className="h-[15%] w-full py-3">
+              <div className="h-[20%] w-full py-3">
                 <>
                   <Link href={`/stories/${story.currentSlug}`}>
                     <p className="line-clamp-1 text-[13px] font-extrabold capitalize tracking-wide hover:underline lg:text-sm">
