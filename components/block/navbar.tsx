@@ -10,7 +10,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { SquareChevronUp } from "lucide-react";
+import { PanelTopClose, SquareChevronUp } from "lucide-react";
 import { createClient } from "@/utils/supabase/client";
 import signout from "@/app/auth/actions";
 
@@ -113,7 +113,7 @@ const Navbar = async ({ className }: { className?: string }) => {
             </div>
             <Drawer>
               <DrawerTrigger className="lg:hidden">
-                <SquareChevronUp className="text-gray-600" />
+                <PanelTopClose className="text-gray-600" />
               </DrawerTrigger>
               <DrawerContent>
                 <DrawerHeader>
@@ -122,7 +122,7 @@ const Navbar = async ({ className }: { className?: string }) => {
                 </DrawerHeader>
                 <DrawerFooter>
                   <div className="flex flex-col items-baseline">
-                    <a href="/" className="flex items-center pb-3">
+                    <a href={"#"} className="flex items-center pb-3">
                       <svg
                         className="h-8 w-8 text-primary"
                         fill="none"
