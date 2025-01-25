@@ -72,6 +72,14 @@ const images = [
 export default function WellArrangedImageGrid() {
   return (
     <div className="mx-auto mt-14 max-w-sm px-3 py-10 lg:max-w-5xl lg:px-0">
+      <div className="mb-3 w-full">
+        <p className="text-2xl font-bold capitalize">
+          Supporting Through Partnerships
+        </p>
+        <p className="text-muted-foreground">
+          Our partners help us make a greater impact together.
+        </p>
+      </div>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
         {images.map((image) => (
           <div
