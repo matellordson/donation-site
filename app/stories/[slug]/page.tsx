@@ -44,6 +44,7 @@ export default async function Page({
           className="h-[200px] w-full rounded-lg object-cover object-top opacity-90 grayscale lg:h-[300px]"
         />
         <div className="prose py-3">
+          <p className="text-xl font-bold lg:text-xl">{data.title}</p>
           <PortableText value={data.content} />
         </div>
       </div>
