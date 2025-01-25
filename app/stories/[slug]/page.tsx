@@ -47,10 +47,7 @@ export default async function Page({
         <div className="prose py-3">
           <p className="text-xl font-bold lg:text-xl">{data.title}</p>
           <PortableText value={data.content} />
-          <DonateButton
-            link={"/ways-to-give"}
-            className="border-lime-700 bg-secondary text-primary no-underline"
-          >
+          <DonateButton link={"/ways-to-give"} className="no-underline">
             Donate
           </DonateButton>
         </div>
