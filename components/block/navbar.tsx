@@ -94,7 +94,7 @@ const Navbar = async ({ className }: { className?: string }) => {
                 <div className="flex gap-x-2">
                   <a
                     href={
-                      "https://billing.stripe.com/p/login/test_5kA02r2Um2SqcyQbII"
+                      "https://billing.stripe.com/p/login/5kAcQzeiK1P3e1aaEE"
                     }
                     className={`hidden md:inline-flex ${buttonVariants({ variant: "outline", size: "sm" })}`}
                   >

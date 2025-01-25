@@ -59,7 +59,7 @@ export default async function Stories() {
               <div className="h-[15%] w-full py-3">
                 <>
                   <Link href={`/stories/${story.currentSlug}`}>
-                    <p className="line-clamp-1 text-[11px] font-extrabold capitalize tracking-wide hover:underline lg:text-sm">
+                    <p className="line-clamp-1 text-[13px] font-extrabold capitalize tracking-wide hover:underline lg:text-sm">
                       {story.title}
                     </p>
                   </Link>
