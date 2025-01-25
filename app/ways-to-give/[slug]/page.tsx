@@ -60,7 +60,7 @@ export default async function Page({
               </span>
             </p>
             <Progress
-              className="h-3 max-w-xs shadow-sm"
+              className="h-3 max-w-xs opacity-70 shadow-sm"
               value={(data.raised / data.total) * 100}
             />
           </div>
