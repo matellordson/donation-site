@@ -1,6 +1,6 @@
+import DonateButton from "@/components/block/donate-button";
 import { sanityClient } from "@/lib/sanity";
 import { PortableText } from "next-sanity";
-import Image from "next/image";
 
 interface type {
   content: any[];
@@ -16,6 +16,9 @@ export default async function OurWork() {
     <div className="">
       <div className="lg: prose mx-auto mt-14 max-w-sm px-3 py-10 lg:max-w-4xl">
         <PortableText value={data.content} />
+        <DonateButton link="/ways-to-give" className="no-underline">
+          Donate
+        </DonateButton>
       </div>
     </div>
   );
