@@ -64,7 +64,7 @@ const Navbar = async ({ className }: { className?: string }) => {
                     Contact Us
                   </a>
                   <a
-                    href="#"
+                    href="partners"
                     className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                   >
                     Partnership
@@ -159,7 +159,7 @@ const Navbar = async ({ className }: { className?: string }) => {
                       Contact Us
                     </a>
                     <a
-                      href="#"
+                      href="/partners"
                       className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
                     >
                       Partnership
