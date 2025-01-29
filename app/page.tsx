@@ -1,5 +1,6 @@
 import DonateButton from "@/components/block/donate-button";
 import Image from "next/image";
+// import { Card } from "@/components/ui/card";
 
 export default function Home() {
   return (
@@ -37,4 +38,8 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+function Card() {
+  return <div className=""></div>;
 }
