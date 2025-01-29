@@ -14,7 +14,7 @@ export default function Home() {
           priority
         />
         <div className="flex w-full flex-col items-start justify-center text-gray-100 drop-shadow-2xl lg:flex-row lg:items-end lg:justify-between">
-          <div className="flex items-end gap-x-3 pl-2 lg:pl-5">
+          <div className="flex items-end gap-x-3 pl-3 lg:pl-5">
             <p className="relative top-1 p-0 text-[75px] font-bold tracking-tighter lg:top-10 lg:text-[150px]">
               Donate
             </p>
@@ -28,7 +28,7 @@ export default function Home() {
             </div>
           </div>
           <DonateButton
-            className="relative bottom-[10px] ml-2 lg:bottom-[20px] lg:mr-5"
+            className="relative bottom-[10px] ml-3 lg:bottom-[20px] lg:mr-5"
             link="/ways-to-give"
           >
             Start Donating
