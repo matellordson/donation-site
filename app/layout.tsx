@@ -30,7 +30,7 @@ export default function RootLayout({
           {children}
           <Toaster />
         </main>
-        <Footer className="flex-shrink-0" />
+        <Footer />
       </body>
     </html>
   );
