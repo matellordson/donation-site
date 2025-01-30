@@ -244,7 +244,7 @@ async function Donate() {
                 href={`/ways-to-give/${option.currentSlug}`}
                 key={option.title}
               >
-                <div className="flex h-[230px] w-64 flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[240px]">
+                <div className="flex h-[280px] w-64 flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[240px]">
                   <div className="h-[49%] w-full rounded bg-muted shadow-sm">
                     <Image
                       priority
