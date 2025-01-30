@@ -1,87 +1,76 @@
 import Link from "next/link";
-import DonateButton from "./donate-button";
+import { Facebook, Twitter, Instagram, Github, Zap } from "lucide-react";
 
-export default function Footer({ className }: { className?: string }) {
-  const currentYear = new Date().getFullYear();
-
+export default function Footer() {
   return (
-    <footer
-      className={`max-w-mx-auto mx-auto h-full w-full max-w-sm px-1 py-3 lg:max-w-7xl lg:px-0 ${className}`}
-    >
-      <div className="w-full rounded-xl bg-primary p-5 text-primary-foreground lg:px-7 lg:py-5">
-        <div className="">
-          <div className="items-center justify-between space-y-5 lg:flex">
-            <div className="flex-shrink-0 space-y-2">
-              <Link href="/" className="flex items-center">
-                <svg
-                  className="h-8 w-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-                <span className="ml-2 text-lg font-bold">J&H Foundation</span>
+    <div className="p-2">
+      <footer className="footer-texture mx-auto w-full max-w-sm rounded-xl bg-primary py-10 text-primary-foreground lg:max-w-7xl">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col space-y-8 md:flex-row md:justify-between md:space-y-0">
+            <div className="flex items-center">
+              <Zap size={32} className="mr-3 text-primary-foreground" />
+              <div>
+                <h3 className="text-lg font-bold">J&H Foundation</h3>
+                <p className="text-sm">
+                  &copy; 2025 Your Company. All rights reserved.
+                </p>
+              </div>
+            </div>
+            <nav className="flex flex-col space-y-4 md:flex-row md:space-x-6 md:space-y-0">
+              <Link href="/about" className="hover:text-gray-900">
+                About
               </Link>
-              <p className="text-xs">Your Compassion Can Rewrite a Story.</p>
-            </div>
-            <div className="flex items-center justify-start gap-x-5 lg:justify-center">
-              <div className="flex flex-col text-xs">
-                <Link href="/about-us" className="rounded-md py-1 lg:px-3">
-                  About Us
-                </Link>
-                <Link href="/our-work" className="rounded-md py-1 lg:px-3">
-                  Our Work
-                </Link>
-                <Link href="/ways-to-give" className="rounded-md py-1 lg:px-3">
-                  Ways to Give
-                </Link>
-              </div>
-
-              <div className="flex flex-col text-xs">
-                <Link href="#" className="rounded-md px-3 py-1">
-                  Our Impact
-                </Link>
-                <Link href="#" className="rounded-md px-3 py-1">
-                  Contact Us
-                </Link>
-                <Link href="#" className="rounded-md px-3 py-1">
-                  Partnership
-                </Link>
-              </div>
-
-              <div className="flex flex-col text-xs">
-                <Link href="#" className="rounded-md px-3 py-1">
-                  X
-                </Link>
-                <Link href="#" className="rounded-md px-3 py-1">
-                  Instagram
-                </Link>
-                <Link href="#" className="rounded-md px-3 py-1">
-                  Facebook
-                </Link>
-              </div>
-            </div>
-          </div>
-          <hr className="my-5 border-emerald-900" />
-          <div className="text-xs">
-            <div className="items-center justify-between lg:flex">
-              <p className="pb-2">
-                &copy; {currentYear} Joy and Hope Foundation. All rights
-                reserved.
-              </p>
-              {/* <Link href={"#"} className="text-xs">
-                Terms and Conditions
-              </Link> */}
+              <Link href="/contact" className="hover:text-gray-900">
+                Contact
+              </Link>
+              <Link href="/privacy" className="hover:text-gray-900">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-gray-900">
+                Terms of Service
+              </Link>
+            </nav>
+            <div className="flex space-x-4">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-900"
+              >
+                <Facebook size={20} />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-900"
+              >
+                <Twitter size={20} />
+                <span className="sr-only">Twitter</span>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-900"
+              >
+                <Instagram size={20} />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-900"
+              >
+                <Github size={20} />
+                <span className="sr-only">GitHub</span>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   );
 }
