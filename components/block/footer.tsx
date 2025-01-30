@@ -17,16 +17,28 @@ export default function Footer() {
               </div>
             </div>
             <nav className="flex flex-col space-y-4 md:flex-row md:space-x-6 md:space-y-0">
-              <Link href="/about" className="hover:text-gray-900">
+              <Link
+                href="/about"
+                className="underline-offset-4 hover:underline"
+              >
                 About
               </Link>
-              <Link href="/contact" className="hover:text-gray-900">
+              <Link
+                href="/contact"
+                className="underline-offset-4 hover:underline"
+              >
                 Contact
               </Link>
-              <Link href="/privacy" className="hover:text-gray-900">
+              <Link
+                href="/privacy"
+                className="underline-offset-4 hover:underline"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-gray-900">
+              <Link
+                href="/terms"
+                className="underline-offset-4 hover:underline"
+              >
                 Terms of Service
               </Link>
             </nav>
@@ -35,7 +47,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-900"
+                className="hover:underline"
               >
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
@@ -44,7 +56,7 @@ export default function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-900"
+                className="hover:underline"
               >
                 <Twitter size={20} />
                 <span className="sr-only">Twitter</span>
@@ -53,7 +65,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-900"
+                className="hover:underline"
               >
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
@@ -62,7 +74,7 @@ export default function Footer() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-900"
+                className="hover:underline"
               >
                 <Github size={20} />
                 <span className="sr-only">GitHub</span>

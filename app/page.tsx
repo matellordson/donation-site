@@ -245,7 +245,7 @@ async function Donate() {
                 key={option.title}
               >
                 <div className="flex h-[280px] w-64 flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[240px]">
-                  <div className="h-[49%] w-full rounded bg-muted shadow-sm">
+                  <div className="h-[58%] w-full rounded bg-muted shadow-sm">
                     <Image
                       priority
                       src={urlFor(option.image).url()}
@@ -255,7 +255,7 @@ async function Donate() {
                       className="h-full w-full rounded object-cover object-top opacity-90 shadow-sm grayscale"
                     />
                   </div>
-                  <div className="h-[51%] w-full py-3">
+                  <div className="h-[42%] w-full py-3">
                     <>
                       <p className="line-clamp-1 text-[11px] font-extrabold capitalize tracking-wide lg:text-sm">
                         {option.title}
