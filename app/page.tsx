@@ -123,7 +123,7 @@ async function Donate() {
   }
   async function getData() {
     const query = `
-      *[_type == "donation-options"][0...9] | order(_createdAt asc) {
+      *[_type == "donation-options"][0...11] | order(_createdAt asc) {
     title,
     overview,
     image,
