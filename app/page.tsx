@@ -8,15 +8,8 @@ import {
 } from "@/components/ui/card";
 import { ArrowRight, Heart, PersonStanding, Sprout } from "lucide-react";
 import { sanityClient, urlFor } from "@/lib/sanity";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Progress } from "@/components/ui/progress";
-import Autoplay from "embla-carousel-autoplay";
+import Marquee from "react-fast-marquee";
 
 export default function Home() {
   return (
@@ -161,152 +154,78 @@ async function Donate() {
         Your help is needed right now! A quick donation can make a big impact.{" "}
       </p>
 
-      <Carousel
-        opts={{
-          align: "start",
-        }}
-        className="mx-auto mt-3 hidden w-64 max-w-sm lg:flex lg:w-full lg:max-w-6xl"
-      >
-        <CarouselContent>
-          {donationOptions.map((option, index) => (
-            <CarouselItem
-              key={index}
-              className="basis-1/1 hidden lg:block lg:basis-1/5"
-            >
-              <a
-                href={`/ways-to-give/${option.currentSlug}`}
-                key={option.title}
-              >
-                <div className="flex h-[230px] w-full flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[240px]">
-                  <div className="h-[49%] w-full rounded bg-muted shadow-sm">
-                    <Image
-                      priority
-                      src={urlFor(option.image).url()}
-                      height={1000}
-                      width={210}
-                      alt={option.title}
-                      className="h-full w-full rounded object-cover object-top opacity-90 shadow-sm grayscale"
-                    />
-                  </div>
-                  <div className="h-[51%] w-full py-3">
-                    <>
-                      <p className="line-clamp-1 text-[11px] font-extrabold capitalize tracking-wide lg:text-sm">
-                        {option.title}
-                      </p>
-                      <div className="line-clamp-2 h-[30px] overflow-hidden text-[11px] text-muted-foreground">
-                        <p>{option.overview}</p>
-                      </div>
-                    </>
-                    <div className="mt-2 space-y-px">
-                      <p className="text-[11px] font-bold">
-                        ${option.raised}
-                        <span className="font-normal text-muted-foreground">
-                          {" / "}${option.total}
-                        </span>
-                      </p>
-                      <Progress value={(option.raised / option.total) * 100} />
-                      <div className="flex flex-col">
-                        <div className="h-1 w-2 bg-transparent"></div>
-                        <div className="flex h-fit items-center gap-x-1">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            className="h-3 text-pink-500"
-                          >
-                            <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
-                          </svg>
+      <div className="mx-auto mt-3">
+        <div className="flex space-x-2">
+          <Marquee speed={30}>
+            {donationOptions.map((option, index) => (
+              <div key={index} className="">
+                <a
+                  href={`/ways-to-give/${option.currentSlug}`}
+                  key={option.title}
+                >
+                  <div className="ml-2 flex h-[230px] w-48 flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[240px]">
+                    <div className="h-[49%] w-full rounded bg-muted shadow-sm">
+                      <Image
+                        priority
+                        src={urlFor(option.image).url()}
+                        height={1000}
+                        width={210}
+                        alt={option.title}
+                        className="h-full w-full rounded object-cover object-top opacity-90 shadow-sm grayscale"
+                      />
+                    </div>
+                    <div className="h-[51%] w-full py-3">
+                      <>
+                        <p className="line-clamp-1 text-[11px] font-extrabold capitalize tracking-wide lg:text-sm">
+                          {option.title}
+                        </p>
+                        <div className="line-clamp-2 h-[30px] overflow-hidden text-[11px] text-muted-foreground">
+                          <p>{option.overview}</p>
+                        </div>
+                      </>
+                      <div className="mt-2 space-y-px">
+                        <p className="text-[11px] font-bold">
+                          ${option.raised}
+                          <span className="font-normal text-muted-foreground">
+                            {" / "}${option.total}
+                          </span>
+                        </p>
+                        <Progress
+                          value={(option.raised / option.total) * 100}
+                        />
+                        <div className="flex flex-col">
+                          <div className="h-1 w-2 bg-transparent"></div>
+                          <div className="flex h-fit items-center gap-x-1">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              className="h-3 text-pink-500"
+                            >
+                              <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg>
 
-                          <p className="text-[10px] text-muted-foreground">
-                            {option.supporters} Supporters
-                          </p>
+                            <p className="text-[10px] text-muted-foreground">
+                              {option.supporters} Supporters
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </a>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-      <Carousel
-        opts={{
-          align: "start",
-        }}
-        className="mx-auto mt-3 w-64 max-w-sm lg:hidden lg:w-full lg:max-w-6xl"
-      >
-        <CarouselContent>
-          {donationOptions.map((option, index) => (
-            <CarouselItem key={index} className="basis-1/1 lg:basis-1/5">
-              <a
-                href={`/ways-to-give/${option.currentSlug}`}
-                key={option.title}
-              >
-                <div className="flex h-[280px] w-64 flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[240px]">
-                  <div className="h-[58%] w-full rounded bg-muted shadow-sm">
-                    <Image
-                      priority
-                      src={urlFor(option.image).url()}
-                      height={1000}
-                      width={210}
-                      alt={option.title}
-                      className="h-full w-full rounded object-cover object-top opacity-90 shadow-sm grayscale"
-                    />
-                  </div>
-                  <div className="h-[42%] w-full py-3">
-                    <>
-                      <p className="line-clamp-1 text-[11px] font-extrabold capitalize tracking-wide lg:text-sm">
-                        {option.title}
-                      </p>
-                      <div className="line-clamp-2 h-[30px] overflow-hidden text-[11px] text-muted-foreground">
-                        <p>{option.overview}</p>
-                      </div>
-                    </>
-                    <div className="mt-2 space-y-px">
-                      <p className="text-[11px] font-bold">
-                        ${option.raised}
-                        <span className="font-normal text-muted-foreground">
-                          {" / "}${option.total}
-                        </span>
-                      </p>
-                      <Progress value={(option.raised / option.total) * 100} />
-                      <div className="flex flex-col">
-                        <div className="h-1 w-2 bg-transparent"></div>
-                        <div className="flex h-fit items-center gap-x-1">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            className="h-3 text-pink-500"
-                          >
-                            <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
-                          </svg>
-
-                          <p className="text-[10px] text-muted-foreground">
-                            {option.supporters} Supporters
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+                </a>
+              </div>
+            ))}
+          </Marquee>
+        </div>
+      </div>
     </div>
   );
 }
 
 function JoinUs() {
   return (
-    <div className="texture mt-14 flex items-center justify-center rounded-xl bg-accent py-10">
+    <div className="texture mt-5 flex items-center justify-center rounded-xl bg-accent py-10">
       <div className="flex w-full max-w-2xl items-center justify-center lg:justify-between">
         <Image
           src={"/poor2.jpg"}
@@ -324,7 +243,7 @@ function JoinUs() {
             className="rounded shadow grayscale"
           />
           <p className="text-6xl font-bold text-primary">120,859+</p>
-          <p className="text-muted-foreground lg:text-[0.9rem]">
+          <p className="font-semibold text-muted-foreground lg:text-[0.9rem]">
             People from around the world joined
           </p>
           <DonateButton link="/ways-to-give" className="no-underline">
