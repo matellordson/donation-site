@@ -57,6 +57,7 @@ export default function Home() {
       <Card />
       <hr className="mt-8 h-1 w-full border-2 border-dashed border-secondary" />{" "}
       <Donate />
+      <JoinUs />
     </div>
   );
 }
@@ -299,6 +300,45 @@ async function Donate() {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
+    </div>
+  );
+}
+
+function JoinUs() {
+  return (
+    <div className="texture mt-14 flex items-center justify-center rounded-xl bg-accent py-10">
+      <div className="flex w-full max-w-2xl items-center justify-center lg:justify-between">
+        <Image
+          src={"/poor2.jpg"}
+          alt="img"
+          width={100}
+          height={100}
+          className="hidden rounded shadow grayscale lg:flex"
+        />
+        <div className="flex flex-col items-center justify-center space-y-3 text-center text-sm lg:text-[1.1rem]">
+          <Image
+            src={"/poor3.jpg"}
+            alt="img"
+            height={65}
+            width={65}
+            className="rounded shadow grayscale"
+          />
+          <p className="text-6xl font-bold text-primary">120,859+</p>
+          <p className="text-muted-foreground lg:text-[0.9rem]">
+            People from around the world joined
+          </p>
+          <DonateButton link="/ways-to-give" className="no-underline">
+            Join Donors
+          </DonateButton>
+        </div>
+        <Image
+          src={"/poor1.jpg"}
+          alt="img"
+          width={100}
+          height={100}
+          className="hidden rounded shadow grayscale lg:flex"
+        />
+      </div>
     </div>
   );
 }
