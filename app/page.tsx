@@ -10,6 +10,12 @@ import { ArrowRight, Heart, PersonStanding, Sprout } from "lucide-react";
 import { sanityClient, urlFor } from "@/lib/sanity";
 import { Progress } from "@/components/ui/progress";
 import Marquee from "react-fast-marquee";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Home() {
   return (
@@ -51,6 +57,7 @@ export default function Home() {
       <hr className="mt-8 h-1 w-full border-2 border-dashed border-secondary" />{" "}
       <Donate />
       <JoinUs />
+      <FAX />
     </div>
   );
 }
@@ -154,16 +161,19 @@ async function Donate() {
         Your help is needed right now! A quick donation can make a big impact.{" "}
       </p>
 
-      <div className="mx-auto mt-3">
-        <div className="flex space-x-2">
+      <div className="mx-auto mt-3 overflow-hidden">
+        <div className="flex space-x-2 p-3">
           <Marquee speed={30}>
             {donationOptions.map((option, index) => (
-              <div key={index} className="">
+              <div
+                key={index}
+                className="transition ease-in-out hover:shadow-2xl"
+              >
                 <a
                   href={`/ways-to-give/${option.currentSlug}`}
                   key={option.title}
                 >
-                  <div className="ml-2 flex h-[230px] w-48 flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition hover:bg-neutral-50 lg:h-[240px]">
+                  <div className="ml-2 flex h-[230px] w-48 flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition lg:h-[240px]">
                     <div className="h-[49%] w-full rounded bg-muted shadow-sm">
                       <Image
                         priority
@@ -258,6 +268,59 @@ function JoinUs() {
           className="hidden rounded shadow grayscale lg:flex"
         />
       </div>
+    </div>
+  );
+}
+
+function FAX() {
+  return (
+    <div className="mb-5 mt-4 rounded-xl bg-muted p-5">
+      <p className="text-2xl font-bold capitalize text-primary">
+        Frequently Asked Questions
+      </p>
+      <Accordion type="single" collapsible>
+        <AccordionItem value="item-1">
+          <AccordionTrigger>How can I make a donation?</AccordionTrigger>
+          <AccordionContent>
+            You can donate by selecting your preferred donation cause and
+            payment method on our website. We accept credit/debit cards, Cash
+            app, bank transfers, and other secure payment options.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-2">
+          <AccordionTrigger>Is my donation tax-deductible?</AccordionTrigger>
+          <AccordionContent>
+            Yes, we are a registered nonprofit organization, and your donation
+            may be tax-deductible. Please check with your local tax authorities
+            and save your donation receipt for tax purposes.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-3">
+          <AccordionTrigger>
+            Can I set up a recurring donation?
+          </AccordionTrigger>
+          <AccordionContent>
+            Absolutely! You can choose to make a one-time donation or set up a
+            recurring donation (monthly or annually) to provide ongoing support.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-4">
+          <AccordionTrigger>How will my donation be used?</AccordionTrigger>
+          <AccordionContent>
+            Your donation directly supports [cause-specific impact, e.g., food
+            assistance, education, medical aid]. We are committed to
+            transparency and provide regular updates on how funds are allocated.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-5">
+          <AccordionTrigger>Is my information secure?</AccordionTrigger>
+          <AccordionContent>
+            Yes, we use industry-standard encryption and security measures to
+            protect your personal and payment information. Your data will never
+            be shared without your consent.
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </div>
   );
 }
