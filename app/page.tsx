@@ -281,7 +281,7 @@ function FAX() {
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger>How can I make a donation?</AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="prose">
             You can donate by selecting your preferred donation cause and
             payment method on our website. We accept credit/debit cards, Cash
             app, bank transfers, and other secure payment options.
@@ -289,7 +289,7 @@ function FAX() {
         </AccordionItem>
         <AccordionItem value="item-2">
           <AccordionTrigger>Is my donation tax-deductible?</AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="prose">
             Yes, we are a registered nonprofit organization, and your donation
             may be tax-deductible. Please check with your local tax authorities
             and save your donation receipt for tax purposes.
@@ -299,14 +299,14 @@ function FAX() {
           <AccordionTrigger>
             Can I set up a recurring donation?
           </AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="prose">
             Absolutely! You can choose to make a one-time donation or set up a
             recurring donation (monthly or annually) to provide ongoing support.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-4">
           <AccordionTrigger>How will my donation be used?</AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="prose">
             Your donation directly supports [cause-specific impact, e.g., food
             assistance, education, medical aid]. We are committed to
             transparency and provide regular updates on how funds are allocated.
@@ -314,7 +314,7 @@ function FAX() {
         </AccordionItem>
         <AccordionItem value="item-5">
           <AccordionTrigger>Is my information secure?</AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className="prose">
             Yes, we use industry-standard encryption and security measures to
             protect your personal and payment information. Your data will never
             be shared without your consent.
