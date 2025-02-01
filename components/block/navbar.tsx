@@ -14,7 +14,7 @@ import { PopoverDemo } from "./nav-pop";
 
 const Navbar = async ({ className }: { className?: string }) => {
   return (
-    <nav className="fixed inset-x-0 z-50 mx-auto flex max-w-7xl justify-center rounded-b-xl bg-white/70 shadow-md backdrop-blur-md">
+    <nav className="fixed inset-x-0 z-50 mx-auto flex justify-center bg-white/70 shadow-md backdrop-blur-md">
       <div className="w-full">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">

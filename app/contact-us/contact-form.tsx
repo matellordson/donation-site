@@ -52,7 +52,8 @@ export function ContactForm() {
               </div>
               <Button
                 type="submit"
-                className="w-full"
+                className="w-full text-sm"
+                variant={"emphasis"}
                 formAction={() =>
                   new Promise((resolve) => setTimeout(resolve, 300))
                 }

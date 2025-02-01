@@ -12,7 +12,6 @@ export function LoginForm({
 }: React.ComponentProps<"div">) {
   return (
     <div className="">
-      <Navbar />
       <div className={cn("mt-14 flex flex-col gap-6", className)} {...props}>
         <Card className="overflow-hidden">
           <CardContent className="grid p-0 md:grid-cols-2">
@@ -45,7 +44,11 @@ export function LoginForm({
                     required
                   />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button
+                  type="submit"
+                  className="w-full text-sm"
+                  variant={"emphasis"}
+                >
                   Login
                 </Button>
 
