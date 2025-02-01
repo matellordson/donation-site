@@ -239,6 +239,7 @@ function JoinUs() {
           alt="img"
           width={100}
           height={100}
+          priority
           className="hidden rounded shadow grayscale lg:flex"
         />
         <div className="flex flex-col items-center justify-center space-y-3 text-center text-sm lg:text-[1.1rem]">
@@ -247,6 +248,7 @@ function JoinUs() {
             alt="img"
             height={65}
             width={65}
+            priority
             className="rounded shadow grayscale"
           />
           <p className="text-6xl font-bold text-primary">120,859+</p>
@@ -262,6 +264,7 @@ function JoinUs() {
           alt="img"
           width={100}
           height={100}
+          priority
           className="hidden rounded shadow grayscale lg:flex"
         />
       </div>
