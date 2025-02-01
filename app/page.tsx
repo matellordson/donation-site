@@ -23,7 +23,7 @@ export default function Home() {
       {/* Banner */}
       <div className="relative flex h-[450px] w-full items-end justify-start overflow-hidden rounded-xl bg-gray-600 shadow-sm lg:h-[500px]">
         <Image
-          src={"/banner.jpg"}
+          src={"/banner.jpeg"}
           className="absolute h-full w-full object-cover mix-blend-overlay grayscale"
           alt="donate"
           width={3000}
@@ -162,18 +162,15 @@ async function Donate() {
       </p>
 
       <div className="mx-auto mt-3 overflow-hidden">
-        <div className="flex space-x-2 p-3">
-          <Marquee speed={30}>
+        <Marquee speed={30}>
+          <div className="flex gap-x-3 bg-white">
             {donationOptions.map((option, index) => (
-              <div
-                key={index}
-                className="transition ease-in-out hover:shadow-2xl"
-              >
+              <div key={index} className="bg-white transition ease-in-out">
                 <a
                   href={`/ways-to-give/${option.currentSlug}`}
                   key={option.title}
                 >
-                  <div className="ml-2 flex h-[230px] w-48 flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition lg:h-[240px]">
+                  <div className="flex h-[230px] w-48 flex-col items-center justify-between rounded border border-muted p-2 shadow-sm transition lg:h-[240px]">
                     <div className="h-[49%] w-full rounded bg-muted shadow-sm">
                       <Image
                         priority
@@ -226,8 +223,8 @@ async function Donate() {
                 </a>
               </div>
             ))}
-          </Marquee>
-        </div>
+          </div>
+        </Marquee>
       </div>
     </div>
   );
