@@ -12,28 +12,43 @@ export default function Footer() {
               <div>
                 <h3 className="text-lg font-bold">J&H Foundation</h3>
                 <p className="text-sm">
-                  &copy; 2025 Your Company. All rights reserved.
+                  &copy; 2025 J&H Foundation. All rights reserved.
                 </p>
               </div>
             </div>
             <nav className="flex flex-col space-y-4 md:flex-row md:space-x-6 md:space-y-0">
-              <Link
-                href="/about"
-                className="underline-offset-4 hover:underline"
-              >
-                About
+              <Link href="/" className="underline-offset-4 hover:underline">
+                Home
               </Link>
               <Link
-                href="/contact"
+                href="/about-us"
                 className="underline-offset-4 hover:underline"
               >
-                Contact
+                About Us
               </Link>
               <Link
-                href="/privacy"
+                href="/contact-us"
                 className="underline-offset-4 hover:underline"
               >
-                Privacy Policy
+                Contact Us
+              </Link>
+              <Link
+                href="/our-work"
+                className="underline-offset-4 hover:underline"
+              >
+                Our Work
+              </Link>
+              <Link
+                href="/partners"
+                className="underline-offset-4 hover:underline"
+              >
+                Partnership
+              </Link>
+              <Link
+                href="/Stories"
+                className="underline-offset-4 hover:underline"
+              >
+                Stories
               </Link>
               <Link
                 href="/terms"
@@ -69,15 +84,6 @@ export default function Footer() {
               >
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                <Github size={20} />
-                <span className="sr-only">GitHub</span>
               </a>
             </div>
           </div>
