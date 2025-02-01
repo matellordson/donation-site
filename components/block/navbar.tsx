@@ -1,8 +1,6 @@
-import a from "next/link";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
   DrawerDescription,
   DrawerFooter,
@@ -11,15 +9,13 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { PanelTopClose, SquareChevronUp } from "lucide-react";
-import { createClient } from "@/utils/supabase/client";
-import signout from "@/app/auth/actions";
+import { NavigationMenuDemo } from "./navigation-menu";
+import { PopoverDemo } from "./nav-pop";
 
 const Navbar = async ({ className }: { className?: string }) => {
-  const supabase = createClient().auth.getUser();
-
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 flex justify-center border border-muted bg-white/80 shadow-sm backdrop-blur-2xl">
-      <div className="mx-auto w-full max-w-sm lg:max-w-7xl">
+    <nav className="fixed inset-x-0 z-50 mx-auto flex max-w-7xl justify-center rounded-b-xl bg-white/70 shadow-md backdrop-blur-md">
+      <div className="w-full">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex w-full items-center justify-between">
@@ -44,141 +40,41 @@ const Navbar = async ({ className }: { className?: string }) => {
                 </a>
               </div>
               <div className="hidden md:block">
-                <div className="flex items-baseline space-x-2 text-xs">
-                  <a
-                    href="/about-us"
-                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                  >
-                    About Us
-                  </a>
-                  <a
-                    href="/our-work"
-                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                  >
-                    Our Work
-                  </a>
-                  <a
-                    href="/contact-us"
-                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                  >
-                    Contact Us
-                  </a>
-                  <a
-                    href="partners"
-                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                  >
-                    Partnership
-                  </a>
-                  <a
-                    href="/stories"
-                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                  >
-                    Stories
-                  </a>
-                  <a
-                    href="/ways-to-give"
-                    className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                  >
-                    Donate
-                  </a>
-                </div>
+                <NavigationMenuDemo />
               </div>
-              {!supabase ? (
-                <a
-                  href={"/auth/login"}
-                  className={`hidden md:inline-flex ${buttonVariants({ variant: "outline", size: "sm" })}`}
-                >
-                  Login
-                </a>
-              ) : (
-                <div className="flex gap-x-2">
-                  <a
-                    href={
-                      "https://billing.stripe.com/p/login/5kAcQzeiK1P3e1aaEE"
-                    }
-                    className={`hidden md:inline-flex ${buttonVariants({ variant: "outline", size: "sm" })}`}
-                  >
-                    Billing
-                  </a>
-                  <Button
-                    className="hidden text-gray-600 md:inline-flex"
-                    variant={"ghost"}
-                    size={"sm"}
-                    formAction={signout}
-                  >
-                    Sign out
-                  </Button>
-                </div>
-              )}
+              <PopoverDemo />
             </div>
             <Drawer>
               <DrawerTrigger className="lg:hidden">
                 <PanelTopClose className="text-gray-600" />
               </DrawerTrigger>
-              <DrawerContent>
+              <DrawerContent className="h-[97vh]">
                 <DrawerHeader>
                   <DrawerTitle></DrawerTitle>
                   <DrawerDescription></DrawerDescription>
                 </DrawerHeader>
-                <DrawerFooter>
-                  <div className="flex flex-col items-baseline">
-                    <a href={"#"} className="flex items-center pb-3">
-                      <svg
-                        className="h-8 w-8 text-primary"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                        />
-                      </svg>
-                      <span className="ml-2 text-xl font-bold text-gray-800">
-                        J&H Foundation
-                      </span>
-                    </a>
-                    <a
-                      href="/about-us"
-                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
+                <div className="flex flex-col">
+                  <a href={"#"} className="flex items-center pb-3">
+                    <svg
+                      className="h-8 w-8 text-primary"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
                     >
-                      About Us
-                    </a>
-                    <a
-                      href="/our-work"
-                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                    >
-                      Our Work
-                    </a>
-                    <a
-                      href="/contact-us"
-                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                    >
-                      Contact Us
-                    </a>
-                    <a
-                      href="/partners"
-                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                    >
-                      Partnership
-                    </a>
-                    <a
-                      href="/stories"
-                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                    >
-                      Stories
-                    </a>
-                    <a
-                      href="/ways-to-give"
-                      className="rounded-md px-3 py-2 font-bold text-gray-600 hover:text-primary"
-                    >
-                      Donate
-                    </a>
-                  </div>
-                  <div className="flex flex-col gap-x-2">
-                    {!supabase ? (
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
+                    </svg>
+                    <span className="ml-2 text-xl font-bold text-gray-800">
+                      J&H Foundation
+                    </span>
+                  </a>
+                </div>
+                <div className="flex flex-col gap-x-2">
+                  {/* {!supabase ? (
                       <a
                         href={"/auth/login"}
                         className={`md:inline-flex ${buttonVariants({ variant: "outline" })}`}
@@ -204,9 +100,8 @@ const Navbar = async ({ className }: { className?: string }) => {
                           Sign out
                         </Button>
                       </>
-                    )}
-                  </div>
-                </DrawerFooter>
+                    )} */}
+                </div>
               </DrawerContent>
             </Drawer>
           </div>

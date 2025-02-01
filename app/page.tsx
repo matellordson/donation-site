@@ -19,9 +19,9 @@ import {
 
 export default function Home() {
   return (
-    <div className="mx-auto mt-20 max-w-sm px-3 lg:max-w-7xl lg:px-0">
+    <div className="mx-auto mt-[4rem] max-w-sm px-3 lg:mt-[3.6rem] lg:max-w-7xl lg:px-0">
       {/* Banner */}
-      <div className="relative flex h-[450px] w-full items-end justify-start overflow-hidden rounded-xl bg-slate-300 shadow-sm lg:h-[500px]">
+      <div className="relative flex h-[450px] w-full items-end justify-start overflow-hidden rounded-b-xl bg-slate-300 shadow-sm lg:h-[500px]">
         <Image
           src={"/banner.jpeg"}
           className="absolute h-full w-full object-cover mix-blend-darken grayscale"
