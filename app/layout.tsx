@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/block/footer";
 import Navbar from "@/components/block/navbar";
 import { Toaster } from "@/components/ui/sonner";
+import { MobileNavigation } from "@/components/block/mobile-navigation";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -26,6 +27,9 @@ export default function RootLayout({
         className={`${nunito.className} flex min-h-full flex-col antialiased`}
       >
         <Navbar className="flex-shrink-0" />
+        <div className="lg:hidden">
+          <MobileNavigation />
+        </div>
         <main className="flex-grow overflow-auto">
           {children}
           <Toaster />
