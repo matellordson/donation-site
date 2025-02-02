@@ -79,7 +79,7 @@ export function MobileNavigation() {
   const [overviewOpen, setOverviewOpen] = React.useState(false);
 
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
+    <Sheet>
       <SheetTrigger asChild>
         <Button
           variant="outline"
@@ -87,7 +87,6 @@ export function MobileNavigation() {
           className="z-50 h-10 w-10 md:hidden"
         >
           <Menu className="h-6 w-6" />
-          <span className="sr-only">Toggle navigation menu</span>
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="w-full p-0 sm:w-[350px]">
