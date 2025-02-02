@@ -85,7 +85,6 @@ export function MobileNavigation() {
           variant="outline"
           size="sm"
           className="z-50 h-10 w-10 md:hidden"
-          onClick={() => setOpen(true)}
         >
           <Menu className="h-6 w-6" />
           <span className="sr-only">Open menu</span>
