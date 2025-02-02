@@ -27,7 +27,25 @@ export default function RootLayout({
         className={`${nunito.className} flex min-h-full flex-col antialiased`}
       >
         <Navbar className="flex-shrink-0" />
-        <div className="lg:hidden">
+        <div className="fixed inset-x-0 z-50 flex h-fit items-center justify-between bg-white/70 p-2 shadow-sm backdrop-blur-md lg:hidden">
+          <a href="/" className="flex items-center">
+            <svg
+              className="h-8 w-8 text-primary"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+            <span className="ml-2 text-lg font-bold text-gray-800">
+              J&H Foundation
+            </span>
+          </a>
           <MobileNavigation />
         </div>
         <main className="flex-grow overflow-auto">

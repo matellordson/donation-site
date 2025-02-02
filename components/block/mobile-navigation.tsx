@@ -79,131 +79,120 @@ export function MobileNavigation() {
   const [overviewOpen, setOverviewOpen] = React.useState(false);
 
   return (
-    <>
-      <Button
-        variant="outline"
-        size="sm"
-        className="h-10 w-10 md:hidden"
-        onClick={() => setOpen(true)}
-      >
-        <Menu className="h-6 w-6" />
-        <span className="sr-only">Toggle navigation menu</span>
-      </Button>
-      <Sheet open={open} onOpenChange={setOpen}>
-        <SheetTrigger asChild>
-          <Button
-            variant="outline"
-            size="sm"
-            className="fixed right-3 top-3 z-50 h-10 w-10 md:hidden"
-          >
-            <Menu className="h-6 w-6" />
-            <span className="sr-only">Toggle navigation menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left" className="w-full p-0 sm:w-[350px]">
-          <SheetHeader className="px-6 pt-6">
-            <SheetTitle className="flex items-center">
-              <Bolt className="mr-2 h-6 w-6" />
-              <span className="text-lg font-bold">J&H Foundation</span>
-            </SheetTitle>
-          </SheetHeader>
-          <div className="flex h-[calc(100vh-80px)] flex-col">
-            <ScrollArea className="flex-grow">
-              <div className="p-6">
-                <div className="space-y-6">
-                  <div>
-                    <Button
-                      variant="ghost"
-                      className="w-full justify-between"
-                      onClick={() => setGetInvolvedOpen(!getInvolvedOpen)}
-                    >
-                      Get involved
-                      <ChevronDown
-                        className={`h-4 w-4 transition-transform ${getInvolvedOpen ? "rotate-180" : ""}`}
-                      />
-                    </Button>
-                    {getInvolvedOpen && (
-                      <div className="ml-4 mt-3 space-y-4">
-                        {getInvolved.map((item) => (
-                          <div key={item.title} className="space-y-1">
-                            <Link
-                              href={item.href}
-                              className="block font-medium"
-                              onClick={() => setOpen(false)}
-                            >
-                              {item.title}
-                            </Link>
-                            <p className="text-sm text-muted-foreground">
-                              {item.description}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                  <div>
-                    <Button
-                      variant="ghost"
-                      className="w-full justify-between"
-                      onClick={() => setOverviewOpen(!overviewOpen)}
-                    >
-                      Overview
-                      <ChevronDown
-                        className={`h-4 w-4 transition-transform ${overviewOpen ? "rotate-180" : ""}`}
-                      />
-                    </Button>
-                    {overviewOpen && (
-                      <div className="ml-4 mt-3 space-y-4">
-                        {overview.map((item) => (
-                          <div key={item.title} className="space-y-1">
-                            <Link
-                              href={item.href}
-                              className="block font-medium"
-                              onClick={() => setOpen(false)}
-                            >
-                              {item.title}
-                            </Link>
-                            <p className="text-sm text-muted-foreground">
-                              {item.description}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                  <div>
-                    <Link
-                      href="/contact-us"
-                      className="block py-2 font-medium"
-                      onClick={() => setOpen(false)}
-                    >
-                      Contact us
-                    </Link>
-                  </div>
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger asChild>
+        <Button
+          variant="outline"
+          size="sm"
+          className="z-50 h-10 w-10 md:hidden"
+        >
+          <Menu className="h-6 w-6" />
+          <span className="sr-only">Toggle navigation menu</span>
+        </Button>
+      </SheetTrigger>
+      <SheetContent side="left" className="w-full p-0 sm:w-[350px]">
+        <SheetHeader className="px-6 pt-6">
+          <SheetTitle className="flex items-center">
+            <Bolt className="mr-2 h-6 w-6" />
+            <span className="text-lg font-bold">J&H Foundation</span>
+          </SheetTitle>
+        </SheetHeader>
+        <div className="flex h-[calc(100vh-80px)] flex-col">
+          <ScrollArea className="flex-grow">
+            <div className="p-6">
+              <div className="space-y-6">
+                <div>
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-between"
+                    onClick={() => setGetInvolvedOpen(!getInvolvedOpen)}
+                  >
+                    Get involved
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform ${getInvolvedOpen ? "rotate-180" : ""}`}
+                    />
+                  </Button>
+                  {getInvolvedOpen && (
+                    <div className="ml-4 mt-3 space-y-4">
+                      {getInvolved.map((item) => (
+                        <div key={item.title} className="space-y-1">
+                          <Link
+                            href={item.href}
+                            className="block font-medium"
+                            onClick={() => setOpen(false)}
+                          >
+                            {item.title}
+                          </Link>
+                          <p className="text-sm text-muted-foreground">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div>
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-between"
+                    onClick={() => setOverviewOpen(!overviewOpen)}
+                  >
+                    Overview
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform ${overviewOpen ? "rotate-180" : ""}`}
+                    />
+                  </Button>
+                  {overviewOpen && (
+                    <div className="ml-4 mt-3 space-y-4">
+                      {overview.map((item) => (
+                        <div key={item.title} className="space-y-1">
+                          <Link
+                            href={item.href}
+                            className="block font-medium"
+                            onClick={() => setOpen(false)}
+                          >
+                            {item.title}
+                          </Link>
+                          <p className="text-sm text-muted-foreground">
+                            {item.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div>
+                  <Link
+                    href="/contact-us"
+                    className="block py-2 font-medium"
+                    onClick={() => setOpen(false)}
+                  >
+                    Contact us
+                  </Link>
                 </div>
               </div>
-            </ScrollArea>
-            <div className="mt-auto p-6">
-              <Separator className="mb-6" />
-              <div className="grid grid-cols-2 gap-4">
-                <Link href="/billing" onClick={() => setOpen(false)}>
-                  <Button variant="outline" className="w-full">
-                    Billing
-                  </Button>
-                </Link>
-                <Link href="/signout" onClick={() => setOpen(false)}>
-                  <Button
-                    variant="outline"
-                    className="w-full text-red-600 hover:bg-red-50 hover:text-red-700"
-                  >
-                    Sign out
-                  </Button>
-                </Link>
-              </div>
+            </div>
+          </ScrollArea>
+          <div className="mt-auto p-6">
+            <Separator className="mb-6" />
+            <div className="grid grid-cols-2 gap-4">
+              <Link href="/billing" onClick={() => setOpen(false)}>
+                <Button variant="outline" className="w-full">
+                  Billing
+                </Button>
+              </Link>
+              <Link href="/signout" onClick={() => setOpen(false)}>
+                <Button
+                  variant="outline"
+                  className="w-full text-red-600 hover:bg-red-50 hover:text-red-700"
+                >
+                  Sign out
+                </Button>
+              </Link>
             </div>
           </div>
-        </SheetContent>
-      </Sheet>
-    </>
+        </div>
+      </SheetContent>
+    </Sheet>
   );
 }

@@ -1,17 +1,5 @@
 import { Button, buttonVariants } from "@/components/ui/button";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
-import { PanelTopClose, SquareChevronUp } from "lucide-react";
 import { NavigationMenuDemo } from "./navigation-menu";
-import { PopoverDemo } from "./nav-pop";
-import { Separator } from "@radix-ui/react-separator";
 import Link from "next/link";
 
 const Navbar = async ({ className }: { className?: string }) => {
