@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "@/components/block/footer";
 import Navbar from "@/components/block/navbar";
 import { Toaster } from "@/components/ui/sonner";
-import { MobileNavigation } from "@/components/block/mobile-navigation";
+import MobileNavbar from "@/components/block/mobile-navbar";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -26,29 +26,11 @@ export default function RootLayout({
       <body
         className={`${nunito.className} flex min-h-full flex-col antialiased`}
       >
-        <Navbar className="flex-shrink-0" />
-        <div className="fixed inset-x-0 z-50 flex h-fit items-center justify-between bg-white/70 p-2 shadow-sm backdrop-blur-md lg:hidden">
-          <a href="/" className="flex items-center">
-            <svg
-              className="h-8 w-8 text-primary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M13 10V3L4 14h7v7l9-11h-7z"
-              />
-            </svg>
-            <span className="ml-2 text-lg font-bold text-gray-800">
-              J&H Foundation
-            </span>
-          </a>
-          <MobileNavigation />
-        </div>
-        <main className="flex-grow overflow-auto">
+        <>
+          <Navbar className="flex-shrink-0" />
+          <MobileNavbar />
+        </>
+        <main className="mt-4 flex-grow overflow-auto">
           {children}
           <Toaster />
         </main>
