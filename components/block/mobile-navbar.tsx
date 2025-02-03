@@ -19,8 +19,9 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { PopoverHeader, PopoverTitle } from "@/components/ui/popover";
 
-const MobileNavbar = ({ className }: { className?: string }) => {
+const Navbar = ({ className }: { className?: string }) => {
   return (
     <nav className="fixed inset-x-0 z-50 mx-auto h-16 bg-white/70 shadow-sm backdrop-blur-md">
       <div className="px-4 sm:px-6 lg:px-8">
@@ -60,100 +61,123 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                 </SheetTrigger>
                 <SheetContent
                   side="right"
-                  className="w-[300px] pt-10 sm:w-[400px]"
+                  className="w-[300px] p-0 sm:w-[400px]"
                 >
                   <div className="flex h-full flex-col">
-                    <Accordion type="single" collapsible className="w-full">
-                      <AccordionItem
-                        value="get-involved"
-                        className="border-none"
-                      >
-                        <AccordionTrigger className="py-5 hover:no-underline">
-                          <span className="text-lg font-semibold">
-                            Get involved
-                          </span>
-                        </AccordionTrigger>
-                        <AccordionContent className="pb-5">
-                          <div className="flex flex-col space-y-4">
-                            <Link
-                              href="/"
-                              className="flex flex-col space-y-2 rounded-md bg-muted p-4"
-                            >
-                              <Bolt className="h-6 w-6" />
-                              <div className="text-lg font-medium">
-                                J&H Foundation
+                    <div className="flex-1 overflow-y-auto">
+                      <div className="px-6 py-6">
+                        <Accordion type="single" collapsible className="w-full">
+                          <AccordionItem
+                            value="get-involved"
+                            className="border-none"
+                          >
+                            <AccordionTrigger className="py-5 hover:no-underline">
+                              <span className="text-lg font-semibold">
+                                Get involved
+                              </span>
+                            </AccordionTrigger>
+                            <AccordionContent className="pb-5">
+                              <div className="flex flex-col space-y-4">
+                                <Link
+                                  href="/"
+                                  className="flex flex-col space-y-2 rounded-md bg-muted p-4"
+                                >
+                                  <Bolt className="h-6 w-6" />
+                                  <div className="text-lg font-medium">
+                                    J&H Foundation
+                                  </div>
+                                  <p className="text-sm text-muted-foreground">
+                                    Donating is a powerful way to create change.
+                                    Your support brings hope and resources to
+                                    those in need, making a real difference in
+                                    their lives.
+                                  </p>
+                                </Link>
+                                <MobileNavItem
+                                  href="/about-us"
+                                  label="About Us"
+                                >
+                                  Learn about our mission, values, and the
+                                  change we're creating together.
+                                </MobileNavItem>
+                                <MobileNavItem
+                                  href="/ways-to-give"
+                                  label="Ways to Give"
+                                >
+                                  Explore donation causes and make an impact
+                                </MobileNavItem>
+                                <MobileNavItem
+                                  href="/our-impact"
+                                  label="Our Impact"
+                                >
+                                  See the difference your donation makes in
+                                  real-world stories.
+                                </MobileNavItem>
                               </div>
-                              <p className="text-sm text-muted-foreground">
-                                Donating is a powerful way to create change.
-                                Your support brings hope and resources to those
-                                in need, making a real difference in their
-                                lives.
-                              </p>
-                            </Link>
-                            <MobileNavItem href="/about-us" label="About Us">
-                              Learn about our mission, values, and the change
-                              we're creating together.
-                            </MobileNavItem>
-                            <MobileNavItem
-                              href="/ways-to-give"
-                              label="Ways to Give"
-                            >
-                              Explore donation causes and make an impact
-                            </MobileNavItem>
-                            <MobileNavItem
-                              href="/our-impact"
-                              label="Our Impact"
-                            >
-                              See the difference your donation makes in
-                              real-world stories.
-                            </MobileNavItem>
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem value="overview" className="border-none">
-                        <AccordionTrigger className="py-5 hover:no-underline">
-                          <span className="text-lg font-semibold">
-                            Overview
-                          </span>
-                        </AccordionTrigger>
-                        <AccordionContent className="pb-5">
-                          <div className="flex flex-col space-y-4">
-                            <MobileNavItem href="/about-us" label="About Us">
-                              Discover our mission, values, and the team working
-                              to create positive change in the world.
-                            </MobileNavItem>
-                            <MobileNavItem
-                              href="/our-impact"
-                              label="Our Impact"
-                            >
-                              Explore the real difference your donations are
-                              making in the lives of those we serve.
-                            </MobileNavItem>
-                            <MobileNavItem href="/our-work" label="Our Work">
-                              Learn about the programs and projects you're
-                              helping fund to create lasting impact.
-                            </MobileNavItem>
-                            <MobileNavItem href="/partners" label="Partnership">
-                              Learn about the programs and projects you're
-                              helping fund to create lasting impact.
-                            </MobileNavItem>
-                            <MobileNavItem href="/stories" label="Stories">
-                              Read powerful stories from individuals and
-                              communities whose lives have been transformed.
-                            </MobileNavItem>
-                            <MobileNavItem href="#" label="Terms of Service">
-                              Understand the terms governing your use of our
-                              website and donation process.
-                            </MobileNavItem>
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                    <MobileNavItem
-                      href="/contact-us"
-                      label="Contact Us"
-                      className="py-5"
-                    />
+                            </AccordionContent>
+                          </AccordionItem>
+                          <AccordionItem
+                            value="overview"
+                            className="border-none"
+                          >
+                            <AccordionTrigger className="py-5 hover:no-underline">
+                              <span className="text-lg font-semibold">
+                                Overview
+                              </span>
+                            </AccordionTrigger>
+                            <AccordionContent className="pb-5">
+                              <div className="flex flex-col space-y-4">
+                                <MobileNavItem
+                                  href="/about-us"
+                                  label="About Us"
+                                >
+                                  Discover our mission, values, and the team
+                                  working to create positive change in the
+                                  world.
+                                </MobileNavItem>
+                                <MobileNavItem
+                                  href="/our-impact"
+                                  label="Our Impact"
+                                >
+                                  Explore the real difference your donations are
+                                  making in the lives of those we serve.
+                                </MobileNavItem>
+                                <MobileNavItem
+                                  href="/our-work"
+                                  label="Our Work"
+                                >
+                                  Learn about the programs and projects you're
+                                  helping fund to create lasting impact.
+                                </MobileNavItem>
+                                <MobileNavItem
+                                  href="/partners"
+                                  label="Partnership"
+                                >
+                                  Learn about the programs and projects you're
+                                  helping fund to create lasting impact.
+                                </MobileNavItem>
+                                <MobileNavItem href="/stories" label="Stories">
+                                  Read powerful stories from individuals and
+                                  communities whose lives have been transformed.
+                                </MobileNavItem>
+                                <MobileNavItem
+                                  href="#"
+                                  label="Terms of Service"
+                                >
+                                  Understand the terms governing your use of our
+                                  website and donation process.
+                                </MobileNavItem>
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                        </Accordion>
+                        <MobileNavItem
+                          href="/contact-us"
+                          label="Contact Us"
+                          className="py-5"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </SheetContent>
               </Sheet>
@@ -222,9 +246,11 @@ const ProfileMenu = () => {
           </Avatar>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-44" align="end">
+      <PopoverContent className="w-56" align="end">
+        <PopoverHeader>
+          <PopoverTitle>Account Menu</PopoverTitle>
+        </PopoverHeader>
         <div className="grid gap-4">
-          <div className="font-medium">Account</div>
           <div className="grid gap-2">
             <Link href="/billing">
               <Button variant="ghost" className="w-full justify-start">
@@ -246,4 +272,4 @@ const ProfileMenu = () => {
   );
 };
 
-export default MobileNavbar;
+export default Navbar;
