@@ -54,7 +54,7 @@ const Navbar = ({ className }: { className?: string }) => {
             <div className="lg:hidden">
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon">
+                  <Button variant="outline" size="icon">
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Open menu</span>
                   </Button>
@@ -96,6 +96,7 @@ const Navbar = ({ className }: { className?: string }) => {
                                 <MobileNavItem
                                   href="/about-us"
                                   label="About Us"
+                                  className="px-2"
                                 >
                                   Learn about our mission, values, and the
                                   change we're creating together.
@@ -103,12 +104,14 @@ const Navbar = ({ className }: { className?: string }) => {
                                 <MobileNavItem
                                   href="/ways-to-give"
                                   label="Ways to Give"
+                                  className="px-2"
                                 >
                                   Explore donation causes and make an impact
                                 </MobileNavItem>
                                 <MobileNavItem
                                   href="/our-impact"
                                   label="Our Impact"
+                                  className="px-2"
                                 >
                                   See the difference your donation makes in
                                   real-world stories.
@@ -130,6 +133,7 @@ const Navbar = ({ className }: { className?: string }) => {
                                 <MobileNavItem
                                   href="/about-us"
                                   label="About Us"
+                                  className="px-2"
                                 >
                                   Discover our mission, values, and the team
                                   working to create positive change in the
@@ -138,6 +142,7 @@ const Navbar = ({ className }: { className?: string }) => {
                                 <MobileNavItem
                                   href="/our-impact"
                                   label="Our Impact"
+                                  className="px-2"
                                 >
                                   Explore the real difference your donations are
                                   making in the lives of those we serve.
@@ -145,6 +150,7 @@ const Navbar = ({ className }: { className?: string }) => {
                                 <MobileNavItem
                                   href="/our-work"
                                   label="Our Work"
+                                  className="px-2"
                                 >
                                   Learn about the programs and projects you're
                                   helping fund to create lasting impact.
@@ -152,6 +158,7 @@ const Navbar = ({ className }: { className?: string }) => {
                                 <MobileNavItem
                                   href="/partners"
                                   label="Partnership"
+                                  className="px-2"
                                 >
                                   Learn about the programs and projects you're
                                   helping fund to create lasting impact.
@@ -163,6 +170,7 @@ const Navbar = ({ className }: { className?: string }) => {
                                 <MobileNavItem
                                   href="#"
                                   label="Terms of Service"
+                                  className="px-2"
                                 >
                                   Understand the terms governing your use of our
                                   website and donation process.
@@ -174,7 +182,7 @@ const Navbar = ({ className }: { className?: string }) => {
                         <MobileNavItem
                           href="/contact-us"
                           label="Contact Us"
-                          className="py-5"
+                          className="py-5 px-2"
                         />
                       </div>
                     </div>
@@ -246,20 +254,25 @@ const ProfileMenu = () => {
           </Avatar>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-56" align="end">
+      <PopoverContent className="w-36" align="end">
         <PopoverHeader>
-          <PopoverTitle>Account Menu</PopoverTitle>
+          <PopoverTitle className="pb-2 text-sm">Account Menu</PopoverTitle>
         </PopoverHeader>
-        <div className="grid gap-4">
-          <div className="grid gap-2">
+        <div className="grid">
+          <div className="grid gap-y-2">
             <Link href="/billing">
-              <Button variant="ghost" className="w-full justify-start">
+              <Button
+                variant="outline"
+                size={"sm"}
+                className="w-full justify-start"
+              >
                 Billing
               </Button>
             </Link>
             <Link href="/signout">
               <Button
                 variant="ghost"
+                size={"sm"}
                 className="w-full justify-start text-red-600 hover:bg-red-50 hover:text-red-700"
               >
                 Sign out
