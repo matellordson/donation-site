@@ -193,7 +193,7 @@ async function Donate() {
                       <div className="mt-2 space-y-px">
                         <p className="text-[11px] font-bold">
                           ${option.raised}
-                          <span className="font-normal text-muted-foreground">
+                          <span className="text-primary">
                             {" / "}${option.total}
                           </span>
                         </p>

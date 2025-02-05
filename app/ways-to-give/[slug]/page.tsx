@@ -53,9 +53,9 @@ export default async function Page({
         <div className="my-4 mt-4 space-y-2 rounded-xl bg-accent px-5 py-3 text-primary">
           <p className="pb-2 text-xl font-bold lg:text-2xl">{data.title}</p>
           <div className="space-y-1">
-            <p className="text-[15px] font-bold">
+            <p className="text-[11px] font-bold">
               ${data.raised}
-              <span className="font-normal text-emerald-900">
+              <span className="text-primary">
                 {" / "}${data.total}
               </span>
             </p>
