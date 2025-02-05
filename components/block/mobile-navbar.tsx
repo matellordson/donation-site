@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/popover";
 import { PopoverHeader, PopoverTitle } from "@/components/ui/popover";
 
-const Navbar = ({ className }: { className?: string }) => {
+const MobileNavbar = ({ className }: { className?: string }) => {
   return (
     <nav className="fixed inset-x-0 z-50 mx-auto h-16 bg-white/70 shadow-sm backdrop-blur-md">
       <div className="px-4 sm:px-6 lg:px-8">
@@ -163,7 +163,11 @@ const Navbar = ({ className }: { className?: string }) => {
                                   Learn about the programs and projects you're
                                   helping fund to create lasting impact.
                                 </MobileNavItem>
-                                <MobileNavItem href="/stories" label="Stories">
+                                <MobileNavItem
+                                  href="/stories"
+                                  label="Stories"
+                                  className="px-2"
+                                >
                                   Read powerful stories from individuals and
                                   communities whose lives have been transformed.
                                 </MobileNavItem>
@@ -182,7 +186,7 @@ const Navbar = ({ className }: { className?: string }) => {
                         <MobileNavItem
                           href="/contact-us"
                           label="Contact Us"
-                          className="py-5 px-2"
+                          className="px-2 py-5"
                         />
                       </div>
                     </div>
@@ -208,7 +212,7 @@ const MobileNavItem = ({
   children?: React.ReactNode;
   className?: string;
 }) => (
-  <Link
+  <a
     href={href}
     className={cn(
       "block rounded-lg py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50",
@@ -222,7 +226,7 @@ const MobileNavItem = ({
     {children && (
       <p className="mt-1 text-sm leading-6 text-gray-600">{children}</p>
     )}
-  </Link>
+  </a>
 );
 
 const ProfileMenu = () => {
@@ -285,4 +289,4 @@ const ProfileMenu = () => {
   );
 };
 
-export default Navbar;
+export default MobileNavbar;
