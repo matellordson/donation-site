@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { NavigationMenuDemo } from "./navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Bolt, ChevronRight } from "lucide-react";
+import { Menu, Bolt, ChevronRight, PanelTopClose } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -61,8 +61,10 @@ const MobileNavbar = ({ className }: { className?: string }) => {
           </div>
           <div className="lg:hidden">
             <Drawer>
-              <DrawerTrigger>Open</DrawerTrigger>
-              <DrawerContent className="flex h-[90vh] flex-col">
+              <DrawerTrigger>
+                <PanelTopClose />
+              </DrawerTrigger>
+              <DrawerContent className="flex h-[89vh] flex-col">
                 <DrawerHeader className="flex-shrink-0 bg-white/70 backdrop-blur-md">
                   <DrawerTitle>
                     <Link href="/" className="flex items-center">
