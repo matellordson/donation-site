@@ -225,6 +225,11 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                     label="Contact Us"
                     className="px-2 py-5"
                   />
+                  <MobileNavItem
+                    href="/ways-to-give"
+                    label="Donate"
+                    className="px-2 py-5"
+                  />
                 </div>
               </DrawerContent>
             </Drawer>
