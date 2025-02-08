@@ -62,7 +62,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
           <div className="lg:hidden">
             <Drawer>
               <DrawerTrigger>Open</DrawerTrigger>
-              <DrawerContent className="flex h-[97vh] flex-col">
+              <DrawerContent className="flex h-[90vh] flex-col">
                 <DrawerHeader className="flex-shrink-0 bg-white/70 backdrop-blur-md">
                   <DrawerTitle>
                     <Link href="/" className="flex items-center">

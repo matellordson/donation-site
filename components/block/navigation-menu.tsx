@@ -24,7 +24,7 @@ const overview: { title: string; href: string; description: string }[] = [
   },
   {
     title: "Our Impact",
-    href: "/our-impact",
+    href: "/stories",
     description:
       "Explore the real difference your donations are making in the lives of those we serve.",
   },
