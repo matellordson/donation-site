@@ -59,7 +59,6 @@ export default function Home() {
       <Donate />
       <JoinUs />
       <FAX />
-      <AutoToast />
     </div>
   );
 }

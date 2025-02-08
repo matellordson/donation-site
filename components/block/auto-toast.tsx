@@ -70,4 +70,6 @@ export default function AutoToast() {
 
     return () => clearTimeout(timeoutId);
   }, [toast, count, intervalIndex]);
+
+  return <></>;
 }
