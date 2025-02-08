@@ -82,7 +82,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
               <DrawerTrigger>
                 <PanelTopClose />
               </DrawerTrigger>
-              <DrawerContent className="flex h-[89vh] flex-col">
+              <DrawerContent className="flex h-[86vh] flex-col">
                 <DrawerHeader className="flex-shrink-0 bg-white/70 backdrop-blur-md">
                   <DrawerTitle>
                     <Link href="/" className="flex items-center">
