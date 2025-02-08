@@ -49,13 +49,11 @@ const MobileNavbar = ({ className }: { className?: string }) => {
           <div className="hidden lg:block">
             <NavigationMenuDemo />
           </div>
-          <div className="flex items-center space-x-4">
-            <div className="lg:hidden">
-              <Sheet>
-                <SheetTrigger>open</SheetTrigger>
-                <SheetContent></SheetContent>
-              </Sheet>
-            </div>
+          <div className="lg:hidden">
+            <Sheet>
+              <SheetTrigger>open</SheetTrigger>
+              <SheetContent></SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
