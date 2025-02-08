@@ -50,148 +50,10 @@ const MobileNavbar = ({ className }: { className?: string }) => {
             <NavigationMenuDemo />
           </div>
           <div className="flex items-center space-x-4">
-            <ProfileMenu />
             <div className="lg:hidden">
               <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="outline" size="icon">
-                    <Menu className="h-6 w-6" />
-                    <span className="sr-only">Open menu</span>
-                  </Button>
-                </SheetTrigger>
-                <SheetContent
-                  side="right"
-                  className="w-[300px] p-0 sm:w-[400px]"
-                >
-                  <div className="flex h-full flex-col">
-                    <div className="flex-1 overflow-y-auto">
-                      <div className="px-6 py-6">
-                        <Accordion type="single" collapsible className="w-full">
-                          <AccordionItem
-                            value="get-involved"
-                            className="border-none"
-                          >
-                            <AccordionTrigger className="py-5 hover:no-underline">
-                              <span className="text-lg font-semibold">
-                                Get involved
-                              </span>
-                            </AccordionTrigger>
-                            <AccordionContent className="pb-5">
-                              <div className="flex flex-col space-y-4">
-                                <Link
-                                  href="/"
-                                  className="flex flex-col space-y-2 rounded-md bg-muted p-4"
-                                >
-                                  <Bolt className="h-6 w-6" />
-                                  <div className="text-lg font-medium">
-                                    J&H Foundation
-                                  </div>
-                                  <p className="text-sm text-muted-foreground">
-                                    Donating is a powerful way to create change.
-                                    Your support brings hope and resources to
-                                    those in need, making a real difference in
-                                    their lives.
-                                  </p>
-                                </Link>
-                                <MobileNavItem
-                                  href="/about-us"
-                                  label="About Us"
-                                  className="px-2"
-                                >
-                                  Learn about our mission, values, and the
-                                  change we're creating together.
-                                </MobileNavItem>
-                                <MobileNavItem
-                                  href="/ways-to-give"
-                                  label="Ways to Give"
-                                  className="px-2"
-                                >
-                                  Explore donation causes and make an impact
-                                </MobileNavItem>
-                                <MobileNavItem
-                                  href="/our-impact"
-                                  label="Our Impact"
-                                  className="px-2"
-                                >
-                                  See the difference your donation makes in
-                                  real-world stories.
-                                </MobileNavItem>
-                              </div>
-                            </AccordionContent>
-                          </AccordionItem>
-                          <AccordionItem
-                            value="overview"
-                            className="border-none"
-                          >
-                            <AccordionTrigger className="py-5 hover:no-underline">
-                              <span className="text-lg font-semibold">
-                                Overview
-                              </span>
-                            </AccordionTrigger>
-                            <AccordionContent className="pb-5">
-                              <div className="flex flex-col space-y-4">
-                                <MobileNavItem
-                                  href="/about-us"
-                                  label="About Us"
-                                  className="px-2"
-                                >
-                                  Discover our mission, values, and the team
-                                  working to create positive change in the
-                                  world.
-                                </MobileNavItem>
-                                <MobileNavItem
-                                  href="/our-impact"
-                                  label="Our Impact"
-                                  className="px-2"
-                                >
-                                  Explore the real difference your donations are
-                                  making in the lives of those we serve.
-                                </MobileNavItem>
-                                <MobileNavItem
-                                  href="/our-work"
-                                  label="Our Work"
-                                  className="px-2"
-                                >
-                                  Learn about the programs and projects you're
-                                  helping fund to create lasting impact.
-                                </MobileNavItem>
-                                <MobileNavItem
-                                  href="/partners"
-                                  label="Partnership"
-                                  className="px-2"
-                                >
-                                  Learn about the programs and projects you're
-                                  helping fund to create lasting impact.
-                                </MobileNavItem>
-                                <MobileNavItem
-                                  href="/stories"
-                                  label="Stories"
-                                  className="px-2"
-                                >
-                                  Read powerful stories from individuals and
-                                  communities whose lives have been transformed.
-                                </MobileNavItem>
-                                <MobileNavItem
-                                  href="#"
-                                  label="Terms of Service"
-                                  className="px-2"
-                                >
-                                  Understand the terms governing your use of our
-                                  website and donation process.
-                                </MobileNavItem>
-                              </div>
-                            </AccordionContent>
-                          </AccordionItem>
-                        </Accordion>
-                        <MobileNavItem
-                          href="/contact-us"
-                          label="Contact Us"
-                          className="px-2 py-5"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </SheetContent>
+                <SheetTrigger>open</SheetTrigger>
+                <SheetContent></SheetContent>
               </Sheet>
             </div>
           </div>
@@ -229,64 +91,64 @@ const MobileNavItem = ({
   </a>
 );
 
-const ProfileMenu = () => {
-  return (
-    <Popover>
-      <PopoverTrigger asChild>
-        <Button variant="ghost" size="icon" className="rounded-full">
-          <Avatar>
-            <AvatarImage src="/generic-avatar.svg" alt="Profile" />
-            <AvatarFallback>
-              <svg
-                className="h-full w-full text-gray-300"
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16 16C20.4183 16 24 12.4183 24 8C24 3.58172 20.4183 0 16 0C11.5817 0 8 3.58172 8 8C8 12.4183 11.5817 16 16 16Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M16 18C9.37258 18 4 23.3726 4 30C4 31.1046 4.89543 32 6 32H26C27.1046 32 28 31.1046 28 30C28 23.3726 22.6274 18 16 18Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </AvatarFallback>
-          </Avatar>
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent className="w-36" align="end">
-        <PopoverHeader>
-          <PopoverTitle className="pb-2 text-sm">Account Menu</PopoverTitle>
-        </PopoverHeader>
-        <div className="grid">
-          <div className="grid gap-y-2">
-            <Link href="/billing">
-              <Button
-                variant="outline"
-                size={"sm"}
-                className="w-full justify-start"
-              >
-                Billing
-              </Button>
-            </Link>
-            <Link href="/signout">
-              <Button
-                variant="ghost"
-                size={"sm"}
-                className="w-full justify-start text-red-600 hover:bg-red-50 hover:text-red-700"
-              >
-                Sign out
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </PopoverContent>
-    </Popover>
-  );
-};
+// const ProfileMenu = () => {
+//   return (
+//     <Popover>
+//       <PopoverTrigger asChild>
+//         <Button variant="ghost" size="icon" className="rounded-full">
+//           <Avatar>
+//             <AvatarImage src="/generic-avatar.svg" alt="Profile" />
+//             <AvatarFallback>
+//               <svg
+//                 className="h-full w-full text-gray-300"
+//                 width="32"
+//                 height="32"
+//                 viewBox="0 0 32 32"
+//                 fill="none"
+//                 xmlns="http://www.w3.org/2000/svg"
+//               >
+//                 <path
+//                   d="M16 16C20.4183 16 24 12.4183 24 8C24 3.58172 20.4183 0 16 0C11.5817 0 8 3.58172 8 8C8 12.4183 11.5817 16 16 16Z"
+//                   fill="currentColor"
+//                 />
+//                 <path
+//                   d="M16 18C9.37258 18 4 23.3726 4 30C4 31.1046 4.89543 32 6 32H26C27.1046 32 28 31.1046 28 30C28 23.3726 22.6274 18 16 18Z"
+//                   fill="currentColor"
+//                 />
+//               </svg>
+//             </AvatarFallback>
+//           </Avatar>
+//         </Button>
+//       </PopoverTrigger>
+//       <PopoverContent className="w-36" align="end">
+//         <PopoverHeader>
+//           <PopoverTitle className="pb-2 text-sm">Account Menu</PopoverTitle>
+//         </PopoverHeader>
+//         <div className="grid">
+//           <div className="grid gap-y-2">
+//             <Link href="/billing">
+//               <Button
+//                 variant="outline"
+//                 size={"sm"}
+//                 className="w-full justify-start"
+//               >
+//                 Billing
+//               </Button>
+//             </Link>
+//             <Link href="/signout">
+//               <Button
+//                 variant="ghost"
+//                 size={"sm"}
+//                 className="w-full justify-start text-red-600 hover:bg-red-50 hover:text-red-700"
+//               >
+//                 Sign out
+//               </Button>
+//             </Link>
+//           </div>
+//         </div>
+//       </PopoverContent>
+//     </Popover>
+//   );
+// };
 
 export default MobileNavbar;
