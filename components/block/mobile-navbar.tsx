@@ -5,7 +5,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { NavigationMenuDemo } from "./navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Bolt, ChevronRight, PanelTopClose } from "lucide-react";
+import {
+  Menu,
+  Bolt,
+  ChevronRight,
+  PanelTopClose,
+  ArrowRight,
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -30,6 +36,14 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 const MobileNavbar = ({ className }: { className?: string }) => {
   return (
@@ -59,7 +73,11 @@ const MobileNavbar = ({ className }: { className?: string }) => {
           <div className="hidden lg:block">
             <NavigationMenuDemo />
           </div>
-          <div className="lg:hidden">
+          <div className="hidden lg:block">
+            <ProfileMenu />
+          </div>
+          <div className="flex items-center gap-x-2 lg:hidden">
+            <ProfileMenu />
             <Drawer>
               <DrawerTrigger>
                 <PanelTopClose />
@@ -86,6 +104,13 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                       </span>
                     </Link>
                   </DrawerTitle>
+                  <DrawerDescription className="text-left">
+                    <SignedIn>
+                      <a href="https://billing.stripe.com/p/login/5kAcQzeiK1P3e1aaEE">
+                        Go to Billings
+                      </a>
+                    </SignedIn>
+                  </DrawerDescription>
                 </DrawerHeader>
                 <div className="flex-grow overflow-y-auto px-6 py-6">
                   <Accordion type="single" collapsible className="w-full">
@@ -238,64 +263,19 @@ const MobileNavItem = ({
   </a>
 );
 
-// const ProfileMenu = () => {
-//   return (
-//     <Popover>
-//       <PopoverTrigger asChild>
-//         <Button variant="ghost" size="icon" className="rounded-full">
-//           <Avatar>
-//             <AvatarImage src="/generic-avatar.svg" alt="Profile" />
-//             <AvatarFallback>
-//               <svg
-//                 className="h-full w-full text-gray-300"
-//                 width="32"
-//                 height="32"
-//                 viewBox="0 0 32 32"
-//                 fill="none"
-//                 xmlns="http://www.w3.org/2000/svg"
-//               >
-//                 <path
-//                   d="M16 16C20.4183 16 24 12.4183 24 8C24 3.58172 20.4183 0 16 0C11.5817 0 8 3.58172 8 8C8 12.4183 11.5817 16 16 16Z"
-//                   fill="currentColor"
-//                 />
-//                 <path
-//                   d="M16 18C9.37258 18 4 23.3726 4 30C4 31.1046 4.89543 32 6 32H26C27.1046 32 28 31.1046 28 30C28 23.3726 22.6274 18 16 18Z"
-//                   fill="currentColor"
-//                 />
-//               </svg>
-//             </AvatarFallback>
-//           </Avatar>
-//         </Button>
-//       </PopoverTrigger>
-//       <PopoverContent className="w-36" align="end">
-//         <PopoverHeader>
-//           <PopoverTitle className="pb-2 text-sm">Account Menu</PopoverTitle>
-//         </PopoverHeader>
-//         <div className="grid">
-//           <div className="grid gap-y-2">
-//             <Link href="/billing">
-//               <Button
-//                 variant="outline"
-//                 size={"sm"}
-//                 className="w-full justify-start"
-//               >
-//                 Billing
-//               </Button>
-//             </Link>
-//             <Link href="/signout">
-//               <Button
-//                 variant="ghost"
-//                 size={"sm"}
-//                 className="w-full justify-start text-red-600 hover:bg-red-50 hover:text-red-700"
-//               >
-//                 Sign out
-//               </Button>
-//             </Link>
-//           </div>
-//         </div>
-//       </PopoverContent>
-//     </Popover>
-//   );
-// };
+const ProfileMenu = () => {
+  return (
+    <>
+      <SignedOut>
+        <Button variant={"link"}>
+          <SignInButton />
+        </Button>
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+    </>
+  );
+};
 
 export default MobileNavbar;

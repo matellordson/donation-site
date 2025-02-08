@@ -5,6 +5,7 @@ import Footer from "@/components/block/footer";
 import Navbar from "@/components/block/navbar";
 import { Toaster } from "@/components/ui/sonner";
 import MobileNavbar from "@/components/block/mobile-navbar";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -22,20 +23,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
-      <body
-        className={`${nunito.className} flex min-h-full flex-col antialiased`}
-      >
-        <>
-          <Navbar className="flex-shrink-0" />
-          <MobileNavbar />
-        </>
-        <main className="mt-4 flex-grow overflow-auto">
-          {children}
-          <Toaster />
-        </main>
-        <Footer />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className="h-full">
+        <body
+          className={`${nunito.className} flex min-h-full flex-col antialiased`}
+        >
+          <>
+            <Navbar className="flex-shrink-0" />
+            <MobileNavbar />
+          </>
+          <main className="mt-4 flex-grow overflow-auto">
+            {children}
+            <Toaster />
+          </main>
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

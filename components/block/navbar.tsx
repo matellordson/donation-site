@@ -29,25 +29,8 @@ const Navbar = async ({ className }: { className?: string }) => {
                   </span>
                 </a>
               </div>
-              <NavigationMenuDemo />
-              <div className="mt-auto p-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <Link href="/billing">
-                    <Button variant="outline" size={"sm"} className="w-full">
-                      Billing
-                    </Button>
-                  </Link>
-                  <Link href="/signout">
-                    <Button
-                      variant="outline"
-                      size={"sm"}
-                      className="w-full text-red-600 hover:bg-red-50 hover:text-red-700"
-                    >
-                      Sign out
-                    </Button>
-                  </Link>
-                </div>
-              </div>
+              {/* <NavigationMenuDemo /> */}
+              <div className="mt-auto p-6">hello</div>
             </div>
           </div>
         </div>
