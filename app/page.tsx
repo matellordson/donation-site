@@ -16,6 +16,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import AutoToast from "@/components/block/auto-toast";
 
 export default function Home() {
   return (
@@ -58,6 +59,7 @@ export default function Home() {
       <Donate />
       <JoinUs />
       <FAX />
+      <AutoToast />
     </div>
   );
 }

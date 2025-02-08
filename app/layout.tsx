@@ -3,7 +3,7 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/block/footer";
 import Navbar from "@/components/block/navbar";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
 import MobileNavbar from "@/components/block/mobile-navbar";
 import { ClerkProvider } from "@clerk/nextjs";
 
