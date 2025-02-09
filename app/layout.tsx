@@ -29,8 +29,9 @@ export default function RootLayout({
           className={`${nunito.className} flex min-h-full flex-col antialiased`}
         >
           <>
-            <Navbar className="flex-shrink-0" />
-            <MobileNavbar />
+            <div className="">
+              <MobileNavbar />
+            </div>
           </>
           <main className="mt-4 flex-grow overflow-auto">
             {children}

@@ -1,5 +1,5 @@
 import DonateButton from "@/components/block/donate-button";
-import Navbar from "@/components/block/navbar";
+// import Navbar from "@/components/block/navbar";
 import { sanityClient, urlFor } from "@/lib/sanity";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
@@ -16,7 +16,6 @@ export default async function AboutUs() {
   const data: type = await sanityClient.fetch(query);
   return (
     <div className="">
-      <Navbar />
       <div className="prose mx-auto mt-14 max-w-sm px-3 py-10 lg:max-w-4xl">
         <PortableText value={data.content} />
         <DonateButton link="/ways-to-give" className="no-underline">

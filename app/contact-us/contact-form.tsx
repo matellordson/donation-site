@@ -41,6 +41,15 @@ export function ContactForm() {
                 />
               </div>
               <div className="grid gap-2">
+                <Label htmlFor="message">Subject</Label>
+                <Input
+                  id="subject"
+                  type="text"
+                  placeholder="Your subject here..."
+                  required
+                />
+              </div>
+              <div className="grid gap-2">
                 <Label htmlFor="message">Message</Label>
                 <Textarea
                   id="message"
