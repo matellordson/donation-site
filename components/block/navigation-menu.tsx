@@ -117,6 +117,13 @@ export function NavigationMenuDemo() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/ways-to-give" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Donate
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
         <SignedIn>
           <NavigationMenuItem>
             <Link

@@ -63,9 +63,9 @@ export default async function Stories() {
                       {story.title}
                     </p>
                   </Link>
-                  <p className="prose line-clamp-3 text-sm">
+                  <span className="prose line-clamp-3 text-sm">
                     <PortableText value={story.content} />
-                  </p>
+                  </span>
                 </>
               </div>
             </div>

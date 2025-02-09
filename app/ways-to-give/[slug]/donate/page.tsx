@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Donate() {
   return (
-    <div className="mt-14 grid min-h-svh lg:grid-cols-2">
+    <div className="mx-auto mt-14 grid min-h-svh max-w-sm lg:max-w-full lg:grid-cols-2">
       <div className="flex flex-1 items-center justify-center">
         <div className="w-full">
           <Pricing />
