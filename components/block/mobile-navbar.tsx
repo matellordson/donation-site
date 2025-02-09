@@ -104,13 +104,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                       </span>
                     </Link>
                   </DrawerTitle>
-                  <DrawerDescription className="text-left">
-                    <SignedIn>
-                      <a href="https://billing.stripe.com/p/login/5kAcQzeiK1P3e1aaEE">
-                        Go to Billings
-                      </a>
-                    </SignedIn>
-                  </DrawerDescription>
+                  <DrawerDescription className="text-left"></DrawerDescription>
                 </DrawerHeader>
                 <div className="flex-grow overflow-y-auto px-6 py-6">
                   <Accordion type="single" collapsible className="w-full">
@@ -230,6 +224,13 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                     label="Donate"
                     className="px-2 py-5"
                   />
+                  <SignedIn>
+                    <MobileNavItem
+                      href="https://billing.stripe.com/p/login/5kAcQzeiK1P3e1aaEE"
+                      label="Billings"
+                      className="px-2 py-5"
+                    />
+                  </SignedIn>
                 </div>
               </DrawerContent>
             </Drawer>
