@@ -59,6 +59,7 @@ export default function Home() {
       <Donate />
       <JoinUs />
       <FAX />
+      <AutoToast />
     </div>
   );
 }
@@ -252,7 +253,7 @@ function JoinUs() {
             priority
             className="rounded shadow grayscale"
           />
-          <p className="text-6xl font-bold text-primary">120,859+</p>
+          <p className="text-6xl font-bold text-primary">720,859+</p>
           <p className="font-semibold text-muted-foreground lg:text-[0.9rem]">
             People from around the world joined
           </p>

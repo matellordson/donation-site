@@ -14,6 +14,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { SignedIn } from "@clerk/nextjs";
 
 const overview: { title: string; href: string; description: string }[] = [
   {
@@ -116,6 +117,19 @@ export function NavigationMenuDemo() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
+        <SignedIn>
+          <NavigationMenuItem>
+            <Link
+              href="https://billing.stripe.com/p/login/5kAcQzeiK1P3e1aaEE"
+              legacyBehavior
+              passHref
+            >
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Billings
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        </SignedIn>
       </NavigationMenuList>
     </NavigationMenu>
   );

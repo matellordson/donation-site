@@ -3,10 +3,9 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/block/footer";
 import Navbar from "@/components/block/navbar";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/sonner";
 import MobileNavbar from "@/components/block/mobile-navbar";
 import { ClerkProvider } from "@clerk/nextjs";
-import AutoToast from "@/components/block/auto-toast";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -36,7 +35,6 @@ export default function RootLayout({
           <main className="mt-4 flex-grow overflow-auto">
             {children}
             <Toaster />
-            <AutoToast />
           </main>
           <Footer />
         </body>
