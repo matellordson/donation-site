@@ -88,7 +88,7 @@ export function NavigationMenuDemo() {
               <ListItem href="/ways-to-give" title="Ways to Give">
                 Explore donation causes and make an impact
               </ListItem>
-              <ListItem href="/our-impact" title="Our Impact ">
+              <ListItem href="/our-work" title="Our Impact ">
                 See the difference your donation makes in real-world stories.
               </ListItem>
             </ul>

@@ -146,7 +146,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                             Explore donation causes and make an impact
                           </MobileNavItem>
                           <MobileNavItem
-                            href="/our-impact"
+                            href="/our-work"
                             label="Our Impact"
                             className="px-2"
                           >
@@ -171,7 +171,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                             to create positive change in the world.
                           </MobileNavItem>
                           <MobileNavItem
-                            href="/our-impact"
+                            href="/our-work"
                             label="Our Impact"
                             className="px-2"
                           >

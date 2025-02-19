@@ -15,8 +15,9 @@ export default async function AboutUs() {
 }`;
   const data: type = await sanityClient.fetch(query);
   return (
-    <div className="">
-      <div className="prose mx-auto mt-14 max-w-sm px-3 py-10 lg:max-w-4xl">
+    <div className="mt-14 flex flex-col items-center">
+      <Image src={"/about-us.png"} alt="about-us" width={300} height={300} />
+      <div className="prose mx-auto max-w-sm px-3 py-10 lg:max-w-4xl">
         <PortableText value={data.content} />
         <DonateButton link="/ways-to-give" className="no-underline">
           Donate

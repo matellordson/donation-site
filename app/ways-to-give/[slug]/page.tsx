@@ -88,6 +88,12 @@ export default async function Page({
         </div>
         <div className="prose py-3">
           <PortableText value={data.content} />
+          <DonateButton
+            className="w-32 no-underline"
+            link={`/ways-to-give/${slug}/donate`}
+          >
+            Donate
+          </DonateButton>
         </div>
       </div>
     </div>
