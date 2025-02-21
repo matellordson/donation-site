@@ -78,7 +78,6 @@ export default async function WellArrangedImageGrid() {
       content,
   }`;
   const data: type = await sanityClient.fetch(query);
-  console.log({ data });
   return (
     <div className="mx-auto mt-14 max-w-sm px-3 py-10 lg:max-w-5xl lg:px-0">
       <div className="mb-3 w-full">
