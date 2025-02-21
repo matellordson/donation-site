@@ -49,7 +49,7 @@ const overview: { title: string; href: string; description: string }[] = [
   },
   {
     title: "Terms of Service",
-    href: "#",
+    href: "/terms",
     description:
       "Understand the terms governing your use of our website and donation process.",
   },

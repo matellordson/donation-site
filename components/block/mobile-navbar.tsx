@@ -203,7 +203,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                             communities whose lives have been transformed.
                           </MobileNavItem>
                           <MobileNavItem
-                            href="#"
+                            href="/terms"
                             label="Terms of Service"
                             className="px-2"
                           >
