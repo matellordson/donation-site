@@ -6,6 +6,7 @@ import Navbar from "@/components/block/navbar";
 import { Toaster } from "@/components/ui/sonner";
 import MobileNavbar from "@/components/block/mobile-navbar";
 import { ClerkProvider } from "@clerk/nextjs";
+import SmartSupp from "./smart-supp";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
             <Toaster />
           </main>
           <Footer />
+          <SmartSupp />
         </body>
       </html>
     </ClerkProvider>
