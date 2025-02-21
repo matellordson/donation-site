@@ -279,7 +279,13 @@ function WHO() {
   return (
     <div className="mt-5 w-full items-center justify-center lg:flex lg:h-[25rem]">
       <div className="space-y-4 rounded-l-xl p-3 lg:flex lg:w-[60%] lg:flex-col lg:justify-center lg:space-y-10 lg:bg-muted lg:p-10">
-        <Image src={"/who.png"} height={100} width={100} alt="who" />
+        <Image
+          src={"/who.png"}
+          height={100}
+          width={100}
+          alt="who"
+          className="grayscale"
+        />
         <p className="prose-xl font-semibold lg:prose-2xl">
           Donate for Global Health: Partnering with WHO
         </p>
