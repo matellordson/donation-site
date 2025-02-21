@@ -58,6 +58,7 @@ export default function Home() {
       <hr className="mt-8 h-1 w-full border-2 border-dashed border-secondary" />{" "}
       <Donate />
       <JoinUs />
+      <WHO />
       <FAX />
       <AutoToast />
     </div>
@@ -274,9 +275,38 @@ function JoinUs() {
   );
 }
 
+function WHO() {
+  return (
+    <div className="mt-5 w-full items-center justify-center lg:flex lg:h-[25rem]">
+      <div className="space-y-4 rounded-l-xl p-3 lg:flex lg:w-[60%] lg:flex-col lg:justify-center lg:space-y-10 lg:bg-muted lg:p-10">
+        <Image src={"/who.png"} height={100} width={100} alt="who" />
+        <p className="prose-xl font-semibold lg:prose-2xl">
+          Donate for Global Health: Partnering with WHO
+        </p>
+        <p className="prose">
+          Millions of lives depend on access to healthcare, and with your
+          support, we can make a real difference. Through our partnership with
+          the World Health Organization (WHO), your donation helps deliver
+          life-saving medical aid, emergency relief, and hope to those who need
+          it most. Together, we can heal the world—one donation at a time.
+        </p>
+      </div>
+      <div className="hidden h-full w-[40%] lg:flex">
+        <Image
+          src={"/who.webp"}
+          height={400}
+          width={400}
+          alt="who"
+          className="h-full w-full rounded-r-xl object-cover object-right grayscale"
+        />
+      </div>
+    </div>
+  );
+}
+
 function FAX() {
   return (
-    <div className="mb-5 mt-4 rounded-xl bg-muted p-5">
+    <div className="mb-5 mt-4 rounded-xl bg-muted p-5 lg:bg-accent">
       <p className="text-2xl font-bold capitalize text-primary">
         Frequently Asked Questions
       </p>

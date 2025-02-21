@@ -62,6 +62,11 @@ const images = [
     src: "/partners/amazon.png?height=200&width=200",
     alt: "Small Image 5",
   },
+  {
+    id: 12,
+    src: "/who.png?height=400&width=400",
+    alt: "Big Image 8",
+  },
 ];
 
 interface type {
