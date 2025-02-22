@@ -24,10 +24,9 @@ const overview: { title: string; href: string; description: string }[] = [
       "Discover our mission, values, and the team working to create positive change in the world.",
   },
   {
-    title: "Our Impact",
-    href: "/stories",
-    description:
-      "Explore the real difference your donations are making in the lives of those we serve.",
+    title: "Appeal for Donation",
+    href: "/appeal-for-donation",
+    description: "Request a donation today and get the support you need!",
   },
   {
     title: "Our Work",
@@ -88,8 +87,8 @@ export function NavigationMenuDemo() {
               <ListItem href="/ways-to-give" title="Ways to Give">
                 Explore donation causes and make an impact
               </ListItem>
-              <ListItem href="/our-work" title="Our Impact ">
-                See the difference your donation makes in real-world stories.
+              <ListItem href="/appeal-for-donation" title="Appeal for Donation">
+                Request a donation today and get the support you need!
               </ListItem>
             </ul>
           </NavigationMenuContent>

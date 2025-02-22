@@ -146,12 +146,12 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                             Explore donation causes and make an impact
                           </MobileNavItem>
                           <MobileNavItem
-                            href="/our-work"
-                            label="Our Impact"
+                            href="/appeal-for-donation"
+                            label="Appeal for Donation"
                             className="px-2"
                           >
-                            See the difference your donation makes in real-world
-                            stories.
+                            Request a donation today and get the support you
+                            need!
                           </MobileNavItem>
                         </div>
                       </AccordionContent>
@@ -171,12 +171,12 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                             to create positive change in the world.
                           </MobileNavItem>
                           <MobileNavItem
-                            href="/our-work"
-                            label="Our Impact"
+                            href="/appeal-for-donation"
+                            label="Appeal for Donation"
                             className="px-2"
                           >
-                            Explore the real difference your donations are
-                            making in the lives of those we serve.
+                            Request a donation today and get the support you
+                            need!
                           </MobileNavItem>
                           <MobileNavItem
                             href="/our-work"
