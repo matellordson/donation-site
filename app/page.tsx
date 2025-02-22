@@ -17,6 +17,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import AutoToast from "@/components/block/auto-toast";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (

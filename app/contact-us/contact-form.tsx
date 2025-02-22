@@ -7,13 +7,21 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import ContactUsAction from "./action";
 
 export function ContactForm() {
+  async function handleSubmit(formData: FormData) {
+    await ContactUsAction(formData);
+    new Promise((resolve) => setTimeout(resolve, 300));
+    toast("Thank you for contacting us", {
+      description: "We will get back to you with a response",
+    });
+  }
   return (
     <div className="mt-14 flex flex-col gap-6">
       <Card className="overflow-hidden">
         <CardContent className="grid p-0 md:grid-cols-2">
-          <form className="p-6 md:p-8">
+          <form className="p-6 md:p-8" action={handleSubmit}>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Contact Us</h1>
@@ -34,7 +42,7 @@ export function ContactForm() {
               <div className="grid gap-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
-                  id="email"
+                  name="email"
                   type="email"
                   placeholder="john@example.com"
                   required
@@ -43,7 +51,7 @@ export function ContactForm() {
               <div className="grid gap-2">
                 <Label htmlFor="message">Subject</Label>
                 <Input
-                  id="subject"
+                  name="subject"
                   type="text"
                   placeholder="Your subject here..."
                   required
@@ -63,14 +71,6 @@ export function ContactForm() {
                 type="submit"
                 className="w-full text-sm"
                 variant={"emphasis"}
-                formAction={() =>
-                  new Promise((resolve) => setTimeout(resolve, 300))
-                }
-                onClick={() =>
-                  toast("Thank you for contacting us", {
-                    description: "We will get back to you with a response",
-                  })
-                }
               >
                 Send Message
               </Button>
