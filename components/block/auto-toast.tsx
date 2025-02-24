@@ -3,7 +3,7 @@
 import { useEffect, useCallback } from "react";
 import { toast, Toaster } from "sonner";
 
-const INTERVALS = [3000, 5000, 8000];
+const INTERVALS = [10000, 130000, 15000];
 const AMOUNTS = [
   200, 250, 300, 400, 500, 750, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500,
   5000, 7500, 10000, 15000, 20000, 25000, 30000, 40000, 50000, 75000, 100000,

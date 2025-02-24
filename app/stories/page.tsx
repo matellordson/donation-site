@@ -28,12 +28,14 @@ export default async function Stories() {
 
   const stories: donationTypes[] = await getData();
 
+  const dateobj = new Date();
+  var dateObject = dateobj.getFullYear();
   return (
     <div className="">
       <div className="mx-auto mt-14 max-w-sm px-3 py-10 lg:max-w-5xl lg:px-0">
         <div className="mb-3 w-full">
           <p className="text-2xl font-bold capitalize">
-            Real Stories, Real Impact - 2025
+            Real Stories, Real Impact - {dateObject}
           </p>
           <p className="text-muted-foreground">
             Your donations create hope and change lives.
