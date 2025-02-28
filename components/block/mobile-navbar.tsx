@@ -58,7 +58,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                 alt="logo"
                 height={70}
                 width={70}
-                className="rounded-full p-2"
+                className="rounded-full p-3"
               />
               <span className="ml-2 text-lg font-bold text-gray-800">
                 J&H Foundation
@@ -99,7 +99,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                         alt="logo"
                         height={70}
                         width={70}
-                        className="rounded-full p-2"
+                        className="rounded-full p-3"
                       />
                       <span className="ml-2 text-lg font-bold text-gray-800">
                         J&H Foundation
