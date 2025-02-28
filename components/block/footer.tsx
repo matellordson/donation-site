@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Facebook, Twitter, Instagram, Github, Zap } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,7 +9,13 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col space-y-8 md:flex-row md:justify-between md:space-y-0">
             <div className="flex items-center">
-              <Zap size={32} className="mr-3 text-primary-foreground" />
+              <Image
+                src={"/logo2.png"}
+                alt="logo"
+                height={70}
+                width={70}
+                className="rounded-full p-2"
+              />{" "}
               <div>
                 <h3 className="text-lg font-bold">J&H Foundation</h3>
                 <p className="text-sm">
