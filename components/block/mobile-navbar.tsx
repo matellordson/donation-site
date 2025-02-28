@@ -44,6 +44,7 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import Image from "next/image";
 
 const MobileNavbar = ({ className }: { className?: string }) => {
   return (
@@ -52,19 +53,13 @@ const MobileNavbar = ({ className }: { className?: string }) => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <svg
-                className="h-8 w-8 text-primary"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
+              <Image
+                src={"/logo.png"}
+                alt="logo"
+                height={70}
+                width={70}
+                className="rounded-full p-2"
+              />
               <span className="ml-2 text-lg font-bold text-gray-800">
                 J&H Foundation
               </span>
@@ -86,7 +81,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                 <DrawerHeader className="flex-shrink-0 bg-white/70 backdrop-blur-md">
                   <DrawerTitle>
                     <Link href="/" className="flex items-center">
-                      <svg
+                      {/* <svg
                         className="h-8 w-8 text-primary"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -98,7 +93,14 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                           strokeWidth={2}
                           d="M13 10V3L4 14h7v7l9-11h-7z"
                         />
-                      </svg>
+                      </svg> */}
+                      <Image
+                        src={"/logo.png"}
+                        alt="logo"
+                        height={70}
+                        width={70}
+                        className="rounded-full p-2"
+                      />
                       <span className="ml-2 text-lg font-bold text-gray-800">
                         J&H Foundation
                       </span>

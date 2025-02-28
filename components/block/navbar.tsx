@@ -1,6 +1,7 @@
 import { Button, buttonVariants } from "@/components/ui/button";
 import { NavigationMenuDemo } from "./navigation-menu";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = async ({ className }: { className?: string }) => {
   return (
@@ -11,19 +12,13 @@ const Navbar = async ({ className }: { className?: string }) => {
             <div className="flex w-full items-center justify-between">
               <div className="flex-shrink-0">
                 <a href="/" className="flex items-center">
-                  <svg
-                    className="h-8 w-8 text-primary"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
+                  <Image
+                    src={"/logo.png"}
+                    alt="logo"
+                    height={70}
+                    width={70}
+                    className="rounded-full p-2"
+                  />
                   <span className="ml-2 text-lg font-bold text-gray-800">
                     J&H Foundation
                   </span>
