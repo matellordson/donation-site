@@ -12,11 +12,11 @@ export default function Footer() {
               <Image
                 src={"/logo2.png"}
                 alt="logo"
-                height={70}
-                width={70}
-                className="rounded-full p-2"
-              />{" "}
-              <div>
+                height={90}
+                width={90}
+                className="relative right-4"
+              />
+              <div className="relative right-7">
                 <h3 className="text-lg font-bold">J&H Foundation</h3>
                 <p className="text-sm">
                   &copy; 2025 J&H Foundation. All rights reserved.

@@ -51,16 +51,16 @@ const MobileNavbar = ({ className }: { className?: string }) => {
     <nav className="fixed inset-x-0 z-50 mx-auto h-16 bg-white/70 shadow-sm backdrop-blur-md">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <div className="flex-shrink-0">
+          <div className="w-fit flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
                 src={"/logo.png"}
                 alt="logo"
-                height={70}
-                width={70}
-                className="rounded-full p-3"
+                height={90}
+                width={90}
+                className="relative right-4"
               />
-              <span className="ml-2 text-lg font-bold text-gray-800">
+              <span className="relative right-7 text-lg font-bold text-gray-800">
                 J&H Foundation
               </span>
             </Link>
@@ -97,11 +97,10 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                       <Image
                         src={"/logo.png"}
                         alt="logo"
-                        height={70}
-                        width={70}
-                        className="rounded-full p-3"
+                        height={90}
+                        width={90}
                       />
-                      <span className="ml-2 text-lg font-bold text-gray-800">
+                      <span className="text-lg font-bold text-gray-800">
                         J&H Foundation
                       </span>
                     </Link>
