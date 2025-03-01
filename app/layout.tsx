@@ -16,7 +16,8 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   title: "J&H Foundation",
   description:
-    "Support causes that matter—education, healthcare, disaster relief, and more.",
+    "J&H Foundation is a dedicated donation company supporting impactful causes like education, healthcare, disaster relief, and more. Your contributions help provide essential resources, aid, and opportunities to those in need, making a real difference where it matters most.",
+  metadataBase: new URL("https://www.jandhcharityfoundation.com/ways-to-give"),
 };
 
 export default function RootLayout({
@@ -27,6 +28,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className="h-full">
+        <meta
+          name="google-site-verification"
+          content="WgE2c7vZk-gYZ9KF1SShqKj63sfE9Azzv2Vv0UlQipg"
+        />
         <body
           className={`${nunito.className} flex min-h-full flex-col antialiased`}
         >
