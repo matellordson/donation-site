@@ -12,7 +12,13 @@ const Navbar = async ({ className }: { className?: string }) => {
             <div className="flex w-full items-center justify-between">
               <div className="flex-shrink-0">
                 <a href="/" className="flex items-center">
-                  <Image src={"/logo.png"} alt="logo" height={90} width={90} />
+                  <Image
+                    src={"/logo.png"}
+                    alt="logo"
+                    height={90}
+                    width={90}
+                    priority
+                  />
                   <span className="text-lg font-bold text-gray-800">
                     J&H Foundation
                   </span>

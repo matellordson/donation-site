@@ -58,6 +58,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                 alt="logo"
                 height={80}
                 width={80}
+                priority
                 className="relative right-4"
               />
               <span className="relative right-7 text-lg font-bold text-gray-800">
@@ -99,6 +100,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                         alt="logo"
                         height={90}
                         width={90}
+                        priority
                       />
                       <span className="text-lg font-bold text-gray-800">
                         J&H Foundation
