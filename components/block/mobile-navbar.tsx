@@ -56,8 +56,8 @@ const MobileNavbar = ({ className }: { className?: string }) => {
               <Image
                 src={"/logo.png"}
                 alt="logo"
-                height={90}
-                width={90}
+                height={80}
+                width={80}
                 className="relative right-4"
               />
               <span className="relative right-7 text-lg font-bold text-gray-800">
@@ -121,7 +121,6 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                             href="/"
                             className="flex flex-col space-y-2 rounded-md bg-muted p-4"
                           >
-                            <Bolt className="h-6 w-6" />
                             <div className="text-lg font-medium">
                               J&H Foundation
                             </div>
