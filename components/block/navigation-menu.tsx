@@ -41,7 +41,7 @@ const overview: { title: string; href: string; description: string }[] = [
       "Learn about the programs and projects you’re helping fund to create lasting impact.",
   },
   {
-    title: "Stories",
+    title: "stories",
     href: "/stories",
     description:
       "Read powerful stories from individuals and communities whose lives have been transformed.",

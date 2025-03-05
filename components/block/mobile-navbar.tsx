@@ -198,7 +198,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                           </MobileNavItem>
                           <MobileNavItem
                             href="/stories"
-                            label="Stories"
+                            label="stories"
                             className="px-2"
                           >
                             Read powerful stories from individuals and

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const revalidate = 0;
 
-export default async function Stories() {
+export default async function stories() {
   interface donationTypes {
     title: string;
     currentSlug: string;
@@ -35,7 +35,7 @@ export default async function Stories() {
       <div className="mx-auto mt-14 max-w-sm px-3 py-10 lg:max-w-5xl lg:px-0">
         <div className="mb-3 w-full">
           <p className="text-2xl font-bold capitalize">
-            Real Stories, Real Impact - {dateObject}
+            Real stories, Real Impact - {dateObject}
           </p>
           <p className="text-muted-foreground">
             Your donations create hope and change lives.

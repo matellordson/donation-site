@@ -52,10 +52,10 @@ export default function Footer() {
                 Partnership
               </Link>
               <Link
-                href="/Stories"
+                href="/stories"
                 className="underline-offset-4 hover:underline"
               >
-                Stories
+                stories
               </Link>
               <Link
                 href="/terms"

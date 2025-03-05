@@ -1,7 +1,7 @@
 export default {
   name: 'stories',
   type: 'document',
-  title: 'Stories',
+  title: 'stories',
   fields: [
     {
       name: 'image',
