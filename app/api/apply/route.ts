@@ -9,7 +9,7 @@ export async function POST(req: Request) {
   try {
     const data = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
-      to: ["snr.mn.lordson@gmail.com", "joyandhopecharityfoundation@gmail.com"],
+      to: ["joyandhopecharityfoundation@gmail.com"],
       subject: "You have been contacted for an appeal",
       react: Apply({ name, email, cause, message, amount }),
     });
