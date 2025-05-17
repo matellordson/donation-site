@@ -61,8 +61,8 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                 priority
                 className="relative right-4"
               />
-              <span className="relative right-7 text-lg font-bold text-gray-800">
-                J&H Foundation
+              <span className="relative right-7 text-sm font-bold text-gray-800 lg:text-lg">
+                Joy&Hope Foundation
               </span>
             </Link>
           </div>
@@ -103,7 +103,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                         priority
                       />
                       <span className="text-lg font-bold text-gray-800">
-                        J&H Foundation
+                        Joy&Hope Foundation
                       </span>
                     </Link>
                   </DrawerTitle>
@@ -124,7 +124,7 @@ const MobileNavbar = ({ className }: { className?: string }) => {
                             className="flex flex-col space-y-2 rounded-md bg-muted p-4"
                           >
                             <div className="text-lg font-medium">
-                              J&H Foundation
+                              Joy&Hope Foundation
                             </div>
                             <p className="text-sm text-muted-foreground">
                               Donating is a powerful way to create change. Your

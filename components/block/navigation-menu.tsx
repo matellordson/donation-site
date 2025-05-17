@@ -69,7 +69,7 @@ export function NavigationMenuDemo() {
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      J&H Foundation
+                      Joy&Hope Foundation
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
                       Donating is a powerful way to create change. Your support

@@ -17,9 +17,9 @@ export default function Footer() {
                 className="relative right-4"
               />
               <div className="relative right-7">
-                <h3 className="text-lg font-bold">J&H Foundation</h3>
+                <h3 className="text-lg font-bold">Joy&Hope Foundation</h3>
                 <p className="text-sm">
-                  &copy; 2025 J&H Foundation. All rights reserved.
+                  &copy; 2025 Joy&Hope Foundation. All rights reserved.
                 </p>
               </div>
             </div>

@@ -25,8 +25,8 @@ export default function Home() {
       {/* Banner */}
       <div className="relative flex h-[450px] w-full items-end justify-start overflow-hidden rounded-xl bg-slate-300 shadow-sm lg:h-[500px]">
         <Image
-          src={"/banner.jpeg"}
-          className="absolute h-full w-full object-cover mix-blend-darken grayscale"
+          src={"/povertyawareness.jpg"}
+          className="absolute h-full w-full object-cover object-right mix-blend-darken grayscale"
           alt="donate"
           width={3000}
           height={430}

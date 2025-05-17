@@ -20,7 +20,7 @@ const Navbar = async ({ className }: { className?: string }) => {
                     priority
                   />
                   <span className="text-lg font-bold text-gray-800">
-                    J&H Foundation
+                    Joy&Hope Foundation
                   </span>
                 </a>
               </div>

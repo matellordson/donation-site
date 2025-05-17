@@ -14,9 +14,9 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "J&H Foundation",
+  title: "Joy&Hope Foundation",
   description:
-    "J&H Foundation is a dedicated donation company supporting impactful causes like education, healthcare, disaster relief, and more. Your contributions help provide essential resources, aid, and opportunities to those in need, making a real difference where it matters most.",
+    "Joy&Hope Foundation is a dedicated donation company supporting impactful causes like education, healthcare, disaster relief, and more. Your contributions help provide essential resources, aid, and opportunities to those in need, making a real difference where it matters most.",
   verification: {
     google: "WgE2c7vZk-gYZ9KF1SShqKj63sfE9Azzv2Vv0UlQipg",
   },
